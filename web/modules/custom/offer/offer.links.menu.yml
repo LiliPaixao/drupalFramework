@@ -1,0 +1,6 @@
+offer.config:
+  title: 'Offer global settings'
+  route_name: offer.config
+  description: 'Global settings for the offer platform'
+  parent: system.admin_config_system
+  weight: 99

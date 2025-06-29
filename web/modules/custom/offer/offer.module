@@ -1,0 +1,11 @@
+<?php
+use Drupal\offer\Commands\SeedGeneratorCommand;
+/**
+ * Implements hook_preprocess_html
+ */
+
+function offer_preprocess_html(&$variables) {
+    $variables['tagmanager'] =
+    \Drupal::config('offer.customconfig')->get('tagmanager');
+}
+

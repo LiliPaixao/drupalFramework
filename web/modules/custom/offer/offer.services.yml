@@ -1,0 +1,15 @@
+services:
+  offer.seed_generator_command:
+    class: Drupal\offer\Commands\SeedGeneratorCommand
+    tags:
+      - { name: drush.command }
+
+  offer.test_command:
+    class: Drupal\offer\Commands\TestCommand
+    tags:
+      - { name: drush.command }
+  
+  init_subscriber:
+    class: Drupal\offer\EventSubscriber\OfferSubscriber
+    tags:
+      - { name: event_subscriber }

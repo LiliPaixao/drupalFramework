@@ -1,0 +1,9 @@
+name: Offer
+type: module
+description: Provides the offer entity and configuration form.
+core_version_requirement: ^9.5 || ^10 || ^11
+package: Custom
+dependencies:
+  - drupal:system
+
+
