@@ -1,0 +1,22 @@
+uuid: 5f8d1c60-a41d-4aef-987c-37879c39825a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - observatorio
+_core:
+  default_config_hash: X9CPvlg7H8gQngmDpv34nu-lnUfXupkqZL4jPVUKjXM
+id: observatorio_content
+theme: observatorio
+region: content
+weight: -5
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

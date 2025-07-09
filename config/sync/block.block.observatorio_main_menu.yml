@@ -1,0 +1,27 @@
+uuid: ccdfc895-34da-487b-9c46-d72837acb678
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - observatorio
+_core:
+  default_config_hash: ogpHlNajll4mneGAHGpSVpjdQ7BKNS7eWhV0tOqvajc
+id: observatorio_main_menu
+theme: observatorio
+region: navbar_left
+weight: -5
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 2
+  expand_all_items: false
+visibility: {  }

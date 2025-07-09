@@ -1,0 +1,37 @@
+background_colors:
+  azul_iel_1:
+    label: 'Azul IEL 1'
+    class: 'bg-azul-iel-1'
+    color: '#005ca9'
+  azul_iel_2:
+    label: 'Azul IEL 2'
+    class: 'bg-azul-iel-2'
+    color: '#0a44ab'
+  azul_iel_3:
+    label: 'Azul IEL 3'
+    class: 'bg-azul-iel-3'
+    color: '#3a78f3'
+  roxo_iel:
+    label: 'Roxo IEL'
+    class: 'bg-roxo-iel'
+    color: '#731ed9'
+  branco:
+    label: 'Branco'
+    class: 'bg-branco'
+    color: '#ffffff'
+  azul_escuro_1:
+    label: 'Azul Escuro 1'
+    class: 'bg-azul-escuro-1'
+    color: '#003155'
+  azul_escuro_2:
+    label: 'Azul Escuro 2'
+    class: 'bg-azul-escuro-2'
+    color: '#020d7d'
+  azul_iel_4:
+    label: 'Azul IEL 4'
+    class: 'bg-azul-iel-4'
+    color: '#016bb7'
+  azul_iel_5:
+    label: 'Azul IEL 5'
+    class: 'bg-azul-iel-5'
+    color: '#0a16a0'

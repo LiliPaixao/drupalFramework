@@ -1,0 +1,20 @@
+uuid: fd19159c-d677-4d0a-bd53-151c29d71cbf
+langcode: en
+status: true
+dependencies:
+  theme:
+    - observatorio
+_core:
+  default_config_hash: NwMeBv1F5xfj5pmN13KW9RlGycNvpmKA7P8S3cdVb1E
+id: observatorio_page_title
+theme: observatorio
+region: header
+weight: -2
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

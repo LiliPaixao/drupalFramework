@@ -1,0 +1,20 @@
+uuid: 28442237-e3af-4bd0-ad29-5744d6214618
+langcode: en
+status: true
+dependencies:
+  theme:
+    - observatorio
+_core:
+  default_config_hash: NTBvQKpnsge54Zgsc4du6z8ygDn9A53urQ5tt3zwWrw
+id: observatorio_local_actions
+theme: observatorio
+region: header
+weight: -4
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

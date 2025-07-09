@@ -1,0 +1,42 @@
+name: observatorio
+description: "observatorio theme based on <a href='https://www.drupal.org/project/radix' target='_blank'>Radix 6.x</a> and Bootstrap 5.x"
+screenshot: screenshot.png
+'alt text': 'observatorio theme screenshot'
+core_version_requirement: ^10
+engine: twig
+type: theme
+'base theme': radix
+starterkit: true
+'interface translation project': observatorio
+'interface translation server pattern': themes/custom/observatorio/translations/%language.po
+regions:
+  navbar_branding: 'Navbar branding'
+  navbar_left: 'Navbar left'
+  navbar_right: 'Navbar right'
+  header: Header
+  content: Content
+  page_bottom: 'Page bottom'
+  footer: Footer
+libraries:
+  - observatorio/style
+  - observatorio/global
+  - observatorio/global-styling
+ckeditor5-stylesheets:
+  - build/css/main.style.css
+libraries-extend:
+  core/drupal.ajax:
+    - observatorio/drupal.ajax
+  core/drupal.checkbox:
+    - observatorio/drupal.checkbox
+  core/drupal.message:
+    - observatorio/drupal.message
+  core/drupal.progress:
+    - observatorio/drupal.progress
+  clientside_validation_jquery/cv.jquery.validate:
+    - observatorio/jquery.validate
+dependencies:
+  - bootstrap_layout_builder:bootstrap_layout_builder
+version: 6.0.2
+project: radix
+datestamp: 1746711574
+generator: 'radix_starterkit:6.0.2'

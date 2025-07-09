@@ -1,0 +1,25 @@
+uuid: b5217189-8929-4612-951c-f68c265b59e0
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - observatorio
+_core:
+  default_config_hash: '-Y-3IPnSP71Ez9dtgQPakbgta9FbPx_Cu8wgCLdZOZ8'
+id: observatorio_branding
+theme: observatorio
+region: navbar_branding
+weight: -1
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

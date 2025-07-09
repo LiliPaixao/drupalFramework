@@ -14,7 +14,7 @@ class SeedGeneratorCommand extends DrushCommands {
 /**
 * Runs the OfferCreateSeeds command. Will create all data for the Offer platform.
 *
-* @command offer:offer-create-seeds
+* @command offer-create-seeds
 * @aliases offercs
 * @usage drush offer-create-seeds
 * Display 'Seed data created'

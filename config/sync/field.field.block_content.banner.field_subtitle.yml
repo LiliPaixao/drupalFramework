@@ -1,0 +1,33 @@
+uuid: d7c81177-9174-45fd-9f20-f1e7fd179a21
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.banner
+    - field.storage.block_content.field_subtitle
+    - filter.format.basic_html
+    - filter.format.full_html
+    - filter.format.plain_text
+    - filter.format.restricted_html
+  module:
+    - text
+id: block_content.banner.field_subtitle
+field_name: field_subtitle
+entity_type: block_content
+bundle: banner
+label: subtítulo
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '<p>Coloque aqui o subtítulo</p>'
+    format: full_html
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+    - restricted_html
+    - full_html
+    - plain_text
+field_type: text_long

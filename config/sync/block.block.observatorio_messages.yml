@@ -1,0 +1,22 @@
+uuid: 690bb915-e7ab-407d-b4e6-5b272f07446e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - observatorio
+_core:
+  default_config_hash: 1ga6x_6CQV6hKZUyrZpylf8QBQCtoTXCEVzP2SfsWk4
+id: observatorio_messages
+theme: observatorio
+region: header
+weight: -3
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

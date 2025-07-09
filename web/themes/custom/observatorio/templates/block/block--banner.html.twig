@@ -1,0 +1,16 @@
+<div class="banner-component d-flex flex-wrap align-items-center p-4">
+  {% if content.field_imagem %}
+    <div class="banner-image col-md-5">
+      {{ content.field_imagem }}
+    </div>
+  {% endif %}
+  <div class="banner-text col-md-7">
+    <h2 class="banner-title">{{ content.field_titulo }}</h2>
+    <div class="banner-subtitle">{{ content.field_subtitulo }}</div>
+    {% if content.field_link %}
+      <a href="{{ content.field_link.0.url }}" class="btn btn-primary mt-3">
+        {{ content.field_link.0.title }}
+      </a>
+    {% endif %}
+  </div>
+</div>

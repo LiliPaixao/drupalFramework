@@ -1,0 +1,21 @@
+uuid: 4cc5c771-6e69-4f1b-a98f-0b079db9e5c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.banner
+    - field.storage.block_content.field_title
+id: block_content.banner.field_title
+field_name: field_title
+entity_type: block_content
+bundle: banner
+label: título
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 'Título Principal'
+default_value_callback: ''
+settings: {  }
+field_type: string

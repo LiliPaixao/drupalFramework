@@ -1,0 +1,22 @@
+uuid: 9d9ff486-baed-4efd-8ddc-f4487e3f1005
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - observatorio
+_core:
+  default_config_hash: C9aymmxaO3PnVh-qloNVMzK6NH5vGTKxH2UuBHJ--GI
+id: observatorio_breadcrumbs
+theme: observatorio
+region: header
+weight: -5
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

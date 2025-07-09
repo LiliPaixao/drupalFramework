@@ -1,0 +1,8 @@
+uuid: 73d542f7-c501-4295-ba69-75a068bfa35b
+langcode: en
+status: true
+dependencies: {  }
+id: banner
+label: Banner
+revision: false
+description: 'Componente reutilizável com imagem, título, subtítulo e botão'
