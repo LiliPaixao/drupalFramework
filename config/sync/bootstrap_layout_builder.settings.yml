@@ -3,10 +3,61 @@ _core:
 hide_section_settings: false
 live_preview: true
 one_col_layout_class: col-12
-background_colors: ''
 background_image:
   bundle: image
   field: field_media_image
 background_local_video:
   bundle: video
   field: field_media_video_file
+background:
+  colors:
+    azul-iel-1:
+      label: 'Azul IEL 1'
+      color: '#005ca9'
+    azul-iel-2:
+      label: 'Azul IEL 2'
+      color: '#0a44ab'
+    azul-iel-3:
+      label: 'Azul IEL 3'
+      color: '#3a78f3'
+    roxo-iel:
+      label: 'Roxo IEL'
+      color: '#731ed9'
+    branco:
+      label: Branco
+      color: '#ffffff'
+typography:
+  font_family:
+    lato:
+      label: 'Lato'
+      class: font-lato
+      font_family: 'Lato, sans-serif'
+    roboto:
+      label: 'Roboto'
+      class: font-roboto
+      font_family: 'Roboto, sans-serif'
+  colors:
+    azul-iel-1:
+      label: 'Azul IEL 1'
+      class: text-azul-iel-1
+      color: '#005ca9'
+    roxo-iel:
+      label: 'Roxo IEL'
+      class: text-roxo-iel
+      color: '#731ed9'
+    azul-iel-2:
+      label: 'Azul IEL 2'
+      class: text-azul-iel-2
+      color: '#0a44ab'
+    azul-iel-3:
+      label: 'Azul IEL 3'
+      class: text-azul-iel-3
+      color: '#3a78f3'
+    azul-iel-4:
+      label: 'Azul IEL 4'
+      class: text-azul-iel-4
+      color: '#016bb7'
+    azul-iel-5:
+      label: 'Azul IEL 5'
+      class: text-azul-iel-5
+      color: '#0a16a0'
