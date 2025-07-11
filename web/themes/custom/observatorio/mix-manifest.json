@@ -1,4 +1,6 @@
 {
     "/build/js/main.script.js": "/build/js/main.script.js",
-    "/build/css/main.style.css": "/build/css/main.style.css"
+    "/build/css/main.style.css": "/build/css/main.style.css",
+    "/components/page/page.css": "/components/page/page.css",
+    "/components/navbar/navbar.css": "/components/navbar/navbar.css"
 }
