@@ -29,11 +29,11 @@ background:
 typography:
   font_family:
     lato:
-      label: 'Lato'
+      label: Lato
       class: font-lato
       font_family: 'Lato, sans-serif'
     roboto:
-      label: 'Roboto'
+      label: Roboto
       class: font-roboto
       font_family: 'Roboto, sans-serif'
   colors:

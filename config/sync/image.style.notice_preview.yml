@@ -1,0 +1,14 @@
+uuid: bbc79989-8b0b-4ca5-ba3b-58fb0136abb6
+langcode: en
+status: true
+dependencies: {  }
+name: notice_preview
+label: notice_preview
+effects:
+  05d9925f-d8a4-436f-a734-eaa7d6fd9832:
+    uuid: 05d9925f-d8a4-436f-a734-eaa7d6fd9832
+    id: image_resize
+    weight: 1
+    data:
+      width: 350
+      height: 200

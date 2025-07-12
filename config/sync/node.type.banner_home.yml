@@ -1,0 +1,18 @@
+uuid: bac3d8e9-1617-4b38-bfae-86a146c9cf04
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Banner-home
+type: banner_home
+description: 'Esse tipo de cpnteúdo aparecerá no banner abaixo do menu-navigation'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

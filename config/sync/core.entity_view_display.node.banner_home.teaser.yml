@@ -1,0 +1,32 @@
+uuid: d60a15fe-f4cb-4683-9cf4-3257758ee322
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.banner_home.body
+    - field.field.node.banner_home.field_image_banner
+    - node.type.banner_home
+  module:
+    - text
+    - user
+id: node.banner_home.teaser
+targetEntityType: node
+bundle: banner_home
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_image_banner: true
