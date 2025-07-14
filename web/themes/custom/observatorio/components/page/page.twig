@@ -17,14 +17,14 @@
 	{% endblock %}
 
   {% block page_content %}
-    {% include 'radix:page-content' with {
-      page_main_utility_classes: ['py-5'],
+    {% include 'observatorio:page-content' with {
+      page_main_utility_classes: ['py-1'],
       page_header_container_utility_classes: ['mb-3'],
       page_content_container_type: FALSE,
     }%}
   {% endblock %}
 
 	{% block page_footer %}
-		{% include 'radix:page-footer' %}
+		{% include 'observatorio:page-footer' %}
 	{% endblock %}
 </div>

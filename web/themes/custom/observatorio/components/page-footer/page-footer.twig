@@ -1,0 +1,94 @@
+{#
+/**
+ * @file
+ * Template for a Page Footer component.
+ *
+#}
+{% set footer_attributes = footer_attributes ?: create_attribute() %}
+{%
+  set footer_classes = [
+    'page__footer',
+  ]|merge(footer_utility_classes ?: [])
+%}
+
+{% if page.footer %}
+  <footer {{ footer_attributes.addClass(footer_classes) }}>
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-md-between align-items-md-center">
+        {% block page_inner_footer %}
+          {{ page.footer }}
+        {% endblock %}
+      </div>
+    </div>
+  </footer>
+{% endif %}
+
+          
+{# <footer class="footer-institucional container-fluid bg-primary text-white py-5">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+      <div>
+        <h5><strong>INSTITUCIONAL</strong></h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white">Sobre a FIESC</a></li>
+          <li><a href="#" class="text-white">FIESC 70 Anos</a></li>
+          <li><a href="#" class="text-white">Diretoria e Conselhos</a></li>
+          <li><a href="#" class="text-white">Perfil do Presidente</a></li>
+          <li><a href="#" class="text-white">Entidades</a></li>
+          <li><a href="#" class="text-white">Responsabilidade Social</a></li>
+          <li><a href="#" class="text-white">Relatório Anual</a></li>
+          <li><a href="#" class="text-white">Imprensa</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5><strong>ÁREAS DE ATUAÇÃO</strong></h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white">Defesa da Indústria</a></li>
+          <li><a href="#" class="text-white">Observatório</a></li>
+          <li><a href="#" class="text-white">Internacionalização</a></li>
+          <li><a href="#" class="text-white">Infraestrutura e Meio Ambiente</a></li>
+          <li><a href="#" class="text-white">Associativismo</a></li>
+          <li><a href="#" class="text-white">Inovação</a></li>
+          <li><a href="#" class="text-white">Educação</a></li>
+          <li><a href="#" class="text-white">Saúde e Segurança</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5><strong>OUTRAS PÁGINAS</strong></h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white">Trabalhe Conosco</a></li>
+          <li><a href="#" class="text-white">Portal do Fornecedor</a></li>
+          <li><a href="#" class="text-white">Política de Privacidade</a></li>
+          <li><a href="#" class="text-white">Compliance</a></li>
+          <li><a href="#" class="text-white">Intranet</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5><strong>FEDERAÇÃO DAS INDÚSTRIAS<br>DO ESTADO DE SANTA CATARINA</strong></h5>
+        <p class="mb-1"><i class="bi bi-geo-alt-fill"></i> Rod. Admar Gonzaga, 2765<br>Florianópolis/SC – 88034-001</p>
+        <p class="mb-1"><i class="bi bi-envelope-fill"></i> faleconosco@fiesc.com.br</p>
+        <p class="mb-3"><i class="bi bi-telephone-fill"></i> (48) 3231.4100<br>0800.048.1212</p>
+        <a href="#" class="btn btn-outline-light">Fale Conosco</a>
+      </div>
+    </div>
+
+    <hr class="border-white my-4">
+
+    <div class="d-flex justify-content-between align-items-center flex-wrap">
+      <img src="/themes/custom/observatorio/assets/img/fiesc-logo.png" alt="FIESC" style="height: 40px;">
+
+      <div class="d-flex gap-3 mt-3 mt-md-0">
+        <a href="#" class="text-white"><i class="bi bi-facebook fs-4"></i></a>
+        <a href="#" class="text-white"><i class="bi bi-twitter-x fs-4"></i></a>
+        <a href="#" class="text-white"><i class="bi bi-instagram fs-4"></i></a>
+        <a href="#" class="text-white"><i class="bi bi-linkedin fs-4"></i></a>
+        <a href="#" class="text-white"><i class="bi bi-youtube fs-4"></i></a>
+        <a href="#" class="text-white"><i class="bi bi-cloud fs-4"></i></a>
+        <a href="#" class="text-white"><i class="bi bi-app fs-4"></i></a>
+      </div>
+    </div>
+  </div>
+</footer> #}
