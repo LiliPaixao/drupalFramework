@@ -13,7 +13,7 @@
 
 <div {{ page_attributes.addClass(page_classes) }}>
 	{% block page_navigation %}
-		{% include 'radix:page-navigation' %}
+		{% include 'observatorio:page-navigation' %}
 	{% endblock %}
 
   {% block page_content %}
@@ -21,10 +21,14 @@
       page_main_utility_classes: ['py-1'],
       page_header_container_utility_classes: ['mb-3'],
       page_content_container_type: FALSE,
-    }%}
+      }
+    %}
   {% endblock %}
 
 	{% block page_footer %}
-		{% include 'observatorio:page-footer' %}
+		{% include 'observatorio:page-footer'  with {
+      footer_utility_classes: ['utility-class'],
+      }
+    %}
 	{% endblock %}
 </div>

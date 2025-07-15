@@ -1,0 +1,20 @@
+uuid: 19604c8e-5ec5-45b0-bef9-55bf1e252f97
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+  theme:
+    - observatorio
+id: observatorio_userlogin
+theme: observatorio
+region: navbar_right
+weight: -5
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: 'User login'
+  label_display: '0'
+  provider: user
+visibility: {  }

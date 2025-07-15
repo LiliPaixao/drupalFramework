@@ -1,0 +1,25 @@
+uuid: 2b1eebe3-6fff-471f-bff4-db7b31500bd3
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footercenter
+  module:
+    - system
+  theme:
+    - observatorio
+id: observatorio_footercenter
+theme: observatorio
+region: footer
+weight: -3
+provider: null
+plugin: 'system_menu_block:footercenter'
+settings:
+  id: 'system_menu_block:footercenter'
+  label: FooterCenter
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility: {  }

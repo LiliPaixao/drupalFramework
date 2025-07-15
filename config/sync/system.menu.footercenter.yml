@@ -1,0 +1,8 @@
+uuid: d13cd87b-736f-4bb6-b6d0-327b0b783ce6
+langcode: en
+status: true
+dependencies: {  }
+id: footercenter
+label: FooterCenter
+description: 'Site information links'
+locked: false

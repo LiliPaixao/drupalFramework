@@ -32,10 +32,25 @@
  * http://www.w3.org/TR/WCAG-TECHS/H42.html for more information.
  */
 #}
-{%
+{# {%
   include 'radix:block' with {
     block_utility_classes: [
       'block--system-menu',
     ],
   }
-%}
+%} #}
+
+{# Useful to menu blocks #}
+
+{% set is_footer = configuration.region == 'footer' %}
+<div{{ attributes.addClass('block', is_footer ? 'collapse show' : '') }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{label}}</h2>
+  {% endif %}
+  {{ title_suffix }}
+
+  <div class="content">
+    {{content}}
+  </div>
+</div>

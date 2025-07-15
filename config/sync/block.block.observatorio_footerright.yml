@@ -1,0 +1,25 @@
+uuid: 688bcc58-5444-4fa6-bc0e-458ccfd84e2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footerright
+  module:
+    - system
+  theme:
+    - observatorio
+id: observatorio_footerright
+theme: observatorio
+region: footer
+weight: 0
+provider: null
+plugin: 'system_menu_block:footerright'
+settings:
+  id: 'system_menu_block:footerright'
+  label: FooterRight
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility: {  }

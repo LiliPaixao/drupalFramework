@@ -1,0 +1,35 @@
+uuid: ef132e65-0ed8-4f2c-9b7e-672df7847a83
+langcode: en
+status: true
+dependencies:
+  module:
+    - layout_paragraphs
+id: layout_section
+label: 'Layout section'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins:
+  layout_paragraphs:
+    enabled: true
+    available_layouts:
+      'bootstrap_layout_builder:blb_col_1': 'Bootstrap 1 Col'
+      'bootstrap_layout_builder:blb_col_2': 'Bootstrap 2 Cols'
+      'bootstrap_layout_builder:blb_col_3': 'Bootstrap 3 Cols'
+      'bootstrap_layout_builder:blb_col_4': 'Bootstrap 4 Cols'
+      'bootstrap_layout_builder:blb_col_5': 'Bootstrap 5 Cols'
+      'bootstrap_layout_builder:blb_col_6': 'Bootstrap 6 Cols'
+      'bootstrap_layout_builder:blb_col_7': 'Bootstrap 7 Cols'
+      'bootstrap_layout_builder:blb_col_8': 'Bootstrap 8 Cols'
+      'bootstrap_layout_builder:blb_col_9': 'Bootstrap 9 Cols'
+      'bootstrap_layout_builder:blb_col_10': 'Bootstrap 10 Cols'
+      'bootstrap_layout_builder:blb_col_11': 'Bootstrap 11 Cols'
+      'bootstrap_layout_builder:blb_col_12': 'Bootstrap 12 Cols'
+      layout_onecol: 'One column'
+      layout_twocol_section: 'Two column'
+      layout_twocol: 'Two column'
+      layout_twocol_bricks: 'Two column bricks'
+      layout_threecol_section: 'Three column'
+      layout_threecol_25_50_25: 'Three column 25/50/25'
+      layout_threecol_33_34_33: 'Three column 33/34/33'
+      layout_fourcol_section: 'Four column'

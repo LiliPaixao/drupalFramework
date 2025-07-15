@@ -1,0 +1,15 @@
+{#
+    Template to block observatorio_footerleft in region 'footer'
+#}
+
+<div{{attributes.addClass('block', 'collapse', 'show') }}>
+    {{title_prefix}}
+    {% if label %}
+        <h2{{ title_attributes }}>{{ label }}</h2>
+    {% endif %}
+    {{ title_sufix }}
+
+    <div class="content">
+        {{ content }}
+    </div>
+</div>

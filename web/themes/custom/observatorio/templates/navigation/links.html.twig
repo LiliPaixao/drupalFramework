@@ -33,13 +33,14 @@
 #}
 {% if links -%}
   {%
-    embed 'radix:nav' with {
+    embed 'observatorio:nav' with {
       items: links,
     }
   %}
     {% block nav_items %}
       {% for item in links %}
-        <li{{ item.attributes.addClass('nav-item') }}>
+      {% set item_attributes = item.attributes ?: create_attribute() %}
+        <li{{ item.attributes.addClass( 'nav-item') }}>
           {%- if item.link -%}
             <span{{ item.link.text_attributes.addClass('nav-link') }}>{{ item.link }}</span>
           {%- elseif item.text_attributes -%}
