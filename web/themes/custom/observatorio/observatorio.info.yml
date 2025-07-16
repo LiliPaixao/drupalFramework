@@ -10,6 +10,7 @@ starterkit: true
 'interface translation project': observatorio
 'interface translation server pattern': themes/custom/observatorio/translations/%language.po
 regions:
+  navbar_up: 'Navbar up'
   navbar_branding: 'Navbar branding'
   navbar_left: 'Navbar left'
   navbar_right: 'Navbar right'
@@ -17,6 +18,7 @@ regions:
   content: Content
   page_bottom: 'Page bottom'
   footer: Footer
+  footer_bottom: 'Footer bottom'
 libraries:
   - observatorio/style
   - observatorio/global

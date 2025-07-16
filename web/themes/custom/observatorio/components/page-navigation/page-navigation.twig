@@ -5,11 +5,13 @@
  *
 #}
 {%
-  embed 'radix:navbar' with {
+  embed 'observatorio:navbar' with {
     container: 'fixed',
     navbar_theme: 'light',
     navbar_utility_classes: [
       'justify-content-between',
+      'd-flex',
+      'align-items-center',
     ],
   }
 %}
@@ -21,7 +23,7 @@
 
   {% block left %}
     {% if page.navbar_left %}
-      <div class="me-auto">
+      <div class="ms-auto"> 
         {{ page.navbar_left }}
       </div>
     {% endif %}
@@ -29,7 +31,7 @@
 
   {% block right %}
     {% if page.navbar_right %}
-      <div class="ms-auto">
+       <div class="ms-auto">
         {{ page.navbar_right }}
       </div>
     {% endif %}

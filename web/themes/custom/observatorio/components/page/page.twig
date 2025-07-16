@@ -11,6 +11,15 @@
   ]|merge(page_utility_classes ?: []) 
 %}
 
+{# Navbar superior #}
+{% if page.navbar_up %}
+  <div class="region-navbar-up bg-light py-2">
+    <div class="container">
+      {{ page.navbar_up }}
+    </div>
+  </div>
+{% endif %}
+
 <div {{ page_attributes.addClass(page_classes) }}>
 	{% block page_navigation %}
 		{% include 'observatorio:page-navigation' %}
@@ -31,4 +40,13 @@
       }
     %}
 	{% endblock %}
+
+  {# Novo rodapé inferior #}
+{% if page.footer_bottom %}
+  <div class="region-footer-bottom d-flex flex-wrap justify-content-md-between align-items-md-center py-3">
+    <div class="container">
+      {{ page.footer_bottom }}
+    </div>
+  </div>
+{% endif %}
 </div>
