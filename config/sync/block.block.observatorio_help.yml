@@ -1,0 +1,20 @@
+uuid: 82712509-4fc2-4d5b-9380-90e3a474c68e
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - observatorio
+id: observatorio_help
+theme: observatorio
+region: navbar_up
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

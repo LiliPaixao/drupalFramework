@@ -1,0 +1,21 @@
+uuid: d91b22e7-cd14-471d-95c0-3971bfdaf718
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - observatorio
+id: observatorio_searchform
+theme: observatorio
+region: navbar_up
+weight: 0
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }
