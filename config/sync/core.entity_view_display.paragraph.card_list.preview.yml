@@ -1,0 +1,39 @@
+uuid: ef17d21f-dd97-4fcc-a474-d3ff828253fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.card_list.field_cards
+    - field.field.paragraph.card_list.field_title
+    - paragraphs.paragraphs_type.card_list
+  module:
+    - entity_reference_revisions
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: paragraph.card_list.preview
+targetEntityType: paragraph
+bundle: card_list
+mode: preview
+content:
+  field_cards:
+    type: entity_reference_revisions_entity_view
+    label: inline
+    settings:
+      view_mode: preview
+      link: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_title:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden: {  }

@@ -1,0 +1,19 @@
+uuid: 305fc9cb-be95-467a-b607-6b6cbaec0f4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.header_hero_content
+id: paragraph.header_hero_content.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: header_hero_content
+label: title
+description: 'Título principal'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,14 @@
+uuid: 5cb02e6e-60a8-4fee-be8c-9f61d3bc26cd
+langcode: en
+status: true
+dependencies: {  }
+name: card_image
+label: 'Card Image'
+effects:
+  26d53e63-62d1-4276-86aa-057384e20ccc:
+    uuid: 26d53e63-62d1-4276-86aa-057384e20ccc
+    id: image_resize
+    weight: 1
+    data:
+      width: 300
+      height: 200

@@ -1,0 +1,31 @@
+uuid: 351ff862-4b15-431b-80ca-7672cdfe284f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.header_hero
+    - field.field.block_content.header_hero.body
+    - field.field.block_content.header_hero.field_hero_content
+  module:
+    - text
+id: block_content.header_hero.default
+targetEntityType: block_content
+bundle: header_hero
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_hero_content:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

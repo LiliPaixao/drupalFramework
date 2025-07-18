@@ -1,0 +1,14 @@
+uuid: c885ff46-98ac-4c53-8528-7d37a9511b6b
+langcode: en
+status: true
+dependencies: {  }
+name: large1
+label: large1
+effects:
+  90d14463-9b68-4913-ae82-0cdf6de19601:
+    uuid: 90d14463-9b68-4913-ae82-0cdf6de19601
+    id: image_resize
+    weight: 1
+    data:
+      width: 479
+      height: 479

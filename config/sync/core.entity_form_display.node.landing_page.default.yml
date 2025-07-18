@@ -1,26 +1,22 @@
-uuid: 7e30a748-594b-4c30-ab6d-e74023cb46d6
+uuid: 3e76446b-7c4d-42b0-835e-4e2ab4301391
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.page.body
-    - field.field.node.page.field_paragraphs
-    - field.field.node.page.layout_builder__layout
-    - node.type.page
+    - field.field.node.landing_page.body
+    - field.field.node.landing_page.layout_builder__layout
+    - node.type.landing_page
   module:
-    - paragraphs
     - path
     - text
-_core:
-  default_config_hash: SfpLhPExzvR0MgFp0Wp7CrmgEnhcqQ-fXIWFhbf4ue0
-id: node.page.default
+id: node.landing_page.default
 targetEntityType: node
-bundle: page
+bundle: landing_page
 mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 31
+    weight: 121
     region: content
     settings:
       rows: 9
@@ -33,26 +29,6 @@ content:
     weight: 10
     region: content
     settings: {  }
-    third_party_settings: {  }
-  field_paragraphs:
-    type: paragraphs
-    weight: 121
-    region: content
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      closed_mode: preview
-      autocollapse: none
-      closed_mode_threshold: 0
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: _none
-      features:
-        add_above: '0'
-        collapse_edit_all: collapse_edit_all
-        convert: '0'
-        duplicate: duplicate
     third_party_settings: {  }
   path:
     type: path

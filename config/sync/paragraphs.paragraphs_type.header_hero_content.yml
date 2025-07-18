@@ -1,0 +1,10 @@
+uuid: eee3681e-14b5-4154-8083-b29162da64a2
+langcode: en
+status: true
+dependencies: {  }
+id: header_hero_content
+label: 'Header Hero Content'
+icon_uuid: null
+icon_default: null
+description: 'Conteúdo do hero que fica na região header'
+behavior_plugins: {  }

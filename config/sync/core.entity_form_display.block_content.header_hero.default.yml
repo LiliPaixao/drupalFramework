@@ -1,0 +1,44 @@
+uuid: 4e290273-52e5-422d-b647-fa9e45743f50
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.header_hero
+    - field.field.block_content.header_hero.body
+    - field.field.block_content.header_hero.field_hero_content
+  module:
+    - text
+id: block_content.header_hero.default
+targetEntityType: block_content
+bundle: header_hero
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 26
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_hero_content:
+    type: entity_reference_autocomplete
+    weight: 27
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

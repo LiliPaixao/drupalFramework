@@ -1,0 +1,35 @@
+uuid: ae650404-dabb-4bac-a4f2-8a200687d30a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.header_hero
+    - field.storage.block_content.field_hero_content
+    - paragraphs.paragraphs_type.header_hero_content
+id: block_content.header_hero.field_hero_content
+field_name: field_hero_content
+entity_type: block_content
+bundle: header_hero
+label: 'hero content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      header_hero_content: header_hero_content
+    negate: 0
+    target_bundles_drag_drop:
+      from_library:
+        weight: 4
+        enabled: false
+      header_hero_content:
+        weight: 5
+        enabled: true
+      layout_section:
+        weight: 6
+        enabled: false
+field_type: entity_reference

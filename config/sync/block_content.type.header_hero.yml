@@ -1,0 +1,8 @@
+uuid: 94e8983b-e3bf-48d2-bf6e-a88aebb4cd70
+langcode: en
+status: true
+dependencies: {  }
+id: header_hero
+label: 'Header Hero'
+revision: false
+description: 'Bloco utilizado na região header para cada página '

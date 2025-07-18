@@ -1,0 +1,26 @@
+{#
+  Template para o bloco Header Hero com Paragraphs.
+#}
+{% set paragraph = content.field_hero_content[0]['#paragraph'] %}
+{% set settings = content.field_hero_settings[0]['#paragraph'] ?? null %}
+{% set bg_color = settings ? settings.field_background_color.value : '#002B5C' %}
+{% set image_url = paragraph.field_image.entity.fileuri|image_style('large') %}
+{% set title = paragraph.field_title.value %}
+{% set subtitle = paragraph.field_subtitle.value %}
+{% set link_url = paragraph.field_link.0['#url'] %}
+{% set link_text = paragraph.field_link.0['#title'] %}
+
+<div class="hero-header d-flex align-items-center" style="background-color: {{ bg_color }};">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center py-5">
+    <div class="hero-text text-white col-md-6">
+      <h1 class="display-4 fw-bold">{{ title }}</h1>
+      <p class="lead border-top pt-3">{{ subtitle }}</p>
+      {% if link_url %}
+        <a href="{{ link_url }}" class="btn btn-info mt-3">{{ link_text }}</a>
+      {% endif %}
+    </div>
+    <div class="hero-image col-md-6 text-end">
+      <img src="{{ image_url }}" alt="{{ title }}" class="img-fluid">
+    </div>
+  </div>
+</div>

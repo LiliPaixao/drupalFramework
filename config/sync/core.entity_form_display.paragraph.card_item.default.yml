@@ -1,0 +1,42 @@
+uuid: ddab7e13-9350-4aaa-86d8-735d29aaf09d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.card_item.field_description
+    - field.field.paragraph.card_item.field_image
+    - field.field.paragraph.card_item.field_title
+    - paragraphs.paragraphs_type.card_item
+  module:
+    - media_library
+id: paragraph.card_item.default
+targetEntityType: paragraph
+bundle: card_item
+mode: default
+content:
+  field_description:
+    type: string_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_image:
+    type: media_library_widget
+    weight: 0
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

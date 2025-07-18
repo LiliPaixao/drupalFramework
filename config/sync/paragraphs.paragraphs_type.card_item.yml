@@ -1,0 +1,10 @@
+uuid: cd9fa7a4-c7a6-413a-9268-c230e695a291
+langcode: en
+status: true
+dependencies: {  }
+id: card_item
+label: 'Card item'
+icon_uuid: null
+icon_default: null
+description: 'Bootstrap card'
+behavior_plugins: {  }

@@ -1,0 +1,28 @@
+uuid: 88fe3aa3-555e-4893-b0e5-311875079ec7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.hero.body
+    - node.type.hero
+  module:
+    - text
+    - user
+id: node.hero.default
+targetEntityType: node
+bundle: hero
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

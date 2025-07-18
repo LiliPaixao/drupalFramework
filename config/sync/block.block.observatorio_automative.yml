@@ -1,0 +1,25 @@
+uuid: 964991bd-c3f0-4fdc-aa01-3b84aef0b1ec
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:header_hero:241bbc72-90ed-452e-bb0a-baf743a0b2ad'
+  module:
+    - block_content
+  theme:
+    - observatorio
+id: observatorio_automative
+theme: observatorio
+region: header
+weight: -7
+provider: null
+plugin: 'block_content:241bbc72-90ed-452e-bb0a-baf743a0b2ad'
+settings:
+  id: 'block_content:241bbc72-90ed-452e-bb0a-baf743a0b2ad'
+  label: Automative
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

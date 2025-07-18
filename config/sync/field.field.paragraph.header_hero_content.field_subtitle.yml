@@ -1,0 +1,22 @@
+uuid: 3929515e-1ad6-4351-a456-d0106845ba5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subtitle
+    - paragraphs.paragraphs_type.header_hero_content
+  module:
+    - text
+id: paragraph.header_hero_content.field_subtitle
+field_name: field_subtitle
+entity_type: paragraph
+bundle: header_hero_content
+label: subtitle
+description: Subtítulo
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long
