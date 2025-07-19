@@ -5,10 +5,12 @@
 
 // Include any custom stylesheets here
 // -----------------------------------------------------------------------------
+@import "base/colors";
 @import "base/elements";
 @import "base/functions";
 @import "base/helpers";
 @import "base/typography";
+@import "base/variables";
 
 // Include components
 @import "base/banner";
