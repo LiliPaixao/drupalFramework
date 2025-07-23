@@ -1,0 +1,27 @@
+@import "colors";
+
+.header-hero {
+  background-color: $blue-iel-600;
+  margin-bottom: 5rem;
+}
+
+.header-hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: $white;
+}
+
+.header-hero h2 {
+  font-size: 1.75rem;
+  color: $white;
+}
+
+.header-hero p {
+  font-size: 1.125rem;
+  color: $white;
+}
+
+.header-hero img {
+  max-width: 100%;
+  height: auto;
+}

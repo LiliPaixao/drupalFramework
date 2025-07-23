@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y \
       memcached \
       libmemcached-tools \
       libmemcached-dev \
-      libjpeg62-turbo-dev \
+      libjpeg-dev \
       libmcrypt-dev \
       libxml2-dev \
       libxslt1-dev \
@@ -34,8 +34,10 @@ RUN apt-get update && apt-get install -y \
       libldap2-dev \
       libssl-dev \
       libonig-dev \
-	&& docker-php-ext-configure gd --with-jpeg \
-	&& docker-php-ext-install -j$(nproc) gd
+	  libwebp-dev \
+    && docker-php-ext-install -j$(nproc) gd \
+    && docker-php-ext-configure gd --with-webp --with-jpeg \
+    && docker-php-ext-install gd
 
 RUN apt-get update && \
     apt-get install -y \
@@ -49,10 +51,10 @@ RUN docker-php-ext-install opcache pdo pdo_mysql && docker-php-ext-install mysql
 RUN cd /usr/src && curl -sS http://getcomposer.org/installer | php
 RUN cd /usr/src && mv composer.phar /usr/bin/composer
 
-# --- INÍCIO DA ADIÇÃO PARA DRUSH ---
-# Instala o Drush globalmente via Composer
-RUN composer global require drush/drush
-RUN ln -s /root/.config/composer/vendor/bin/drush /usr/local/bin/drush
+# # --- INÍCIO DA ADIÇÃO PARA DRUSH ---
+# # Instala o Drush globalmente via Composer
+# RUN composer global require drush/drush
+# RUN ln -s /root/.config/composer/vendor/bin/drush /usr/local/bin/drush
 
 # Adiciona o diretório do Drush ao PATH do container
 ENV PATH="/root/.config/composer/vendor/bin:$PATH"
@@ -89,3 +91,6 @@ RUN ( \
     echo "xdebug.client_host=host.docker.internal"; \
     echo "xdebug.start_with_request=yes"; \
 ) >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+
+# Adiciona alias para o Drush no .bashrc do root
+RUN echo "alias drush='./vendor/bin/drush'" >> ~/.bashrc
