@@ -1,7 +1,7 @@
 @import "colors";
 
 .header-hero {
-  background-color: $blue-iel-600;
+  background-color: $blue-iel-700;
   margin-bottom: 5rem;
 }
 
@@ -24,4 +24,24 @@
 .header-hero img {
   max-width: 100%;
   height: auto;
+}
+
+a.btn.btn-link {
+  text-decoration: none;
+  color: $blue-iel-700;
+  background-color: $blue-iel-100;
+  border: 0;
+  border-radius: 5px;
+  align-items: center;
+  transition: color .15s ease, border-color .15s ease, background-color .15s ease;
+  font-weight: 500;
+  padding: .813em 1.875em;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $white;
+    color: $blue-iel-100;
+  }
 }
