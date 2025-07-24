@@ -20,9 +20,9 @@ regions:
   footer: Footer
   footer_bottom: 'Footer bottom'
 libraries:
-  - observatorio/style
   - observatorio/global
   - observatorio/global-styling
+  - observatorio/style
 ckeditor5-stylesheets:
   - build/css/main.style.css
 libraries-extend:
