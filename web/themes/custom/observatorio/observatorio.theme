@@ -15,17 +15,23 @@ foreach (glob($includes_path) as $file) {
  * Preprocessa a página para injetar o paragraph `field_header_hero`
  * na região `page.header` e evitar duplicação em `page.content`.
  */
-function observatorio_preprocess_page(array &$variables) {
-  if (!empty($variables['node']) && $variables['node']->hasField('field_header_hero')) {
-    $paragraph = $variables['node']->get('field_header_hero')->first()?->entity;
-    if ($paragraph) {
-      // Renderiza o paragraph e coloca na região "header".
-      $variables['page']['header'] = \Drupal::entityTypeManager()
-        ->getViewBuilder('paragraph')
-        ->view($paragraph, 'default');
+function observatorio_preprocess_page(array &$variables): void {
+  if (!empty($variables['node']) && $variables['node'] instanceof \Drupal\node\NodeInterface) {
+    $node = $variables['node'];
 
-      // Remove do conteúdo da página para não aparecer duplicado.
-      unset($variables['page']['content']['system_main']['nodes'][$variables['node']->id()]['field_header_hero']);
+    if ($node->hasField('field_header_hero') && !$node->get('field_header_hero')->isEmpty()) {
+      /** @var \Drupal\Core\Field\EntityReferenceFieldItemList $field */
+      $field = $node->get('field_header_hero');
+
+      $view_builder = \Drupal::entityTypeManager()->getViewBuilder('paragraph');
+
+      /** @var \Drupal\paragraphs\Entity\Paragraph[] $paragraphs */
+      $paragraphs = $field->referencedEntities();
+
+      if (!empty($paragraphs)) {
+        $header_hero = reset($paragraphs);
+        $variables['page']['header'] = $view_builder->view($header_hero);
+      }
     }
   }
 }

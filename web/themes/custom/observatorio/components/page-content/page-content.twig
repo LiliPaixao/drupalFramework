@@ -21,20 +21,28 @@
   set page_main_classes = []|merge(page_main_utility_classes ?: []) 
 %}
 
-{% set header_container_class = '' %}
-{# {% if page_header_container_type is null %}
-  {% set header_container_class = 'container' %}
-{% elseif page_header_container_type is not empty %}
-  {% set header_container_class = 'container-' ~ page_header_container_type %}
-{% endif %} #}
+{# Header configuration #}
+{% if page_header_container_type is defined %}
+    {% if page_header_container_type is same as(fluid) %}
+        {% set header_container_class = 'container-fluid' %}
+      {% elseif page_header_container_type is same as(false) %}
+          {% set header_container_class = '' %}
+      {% elseif page_header_container_type is same as(true) %}
+        {% set heade_container_class = 'container' %}
+      {% else %}
+          {% set header_container_class = 'container-' ~ page_header_container_type %}
+    {% endif %}
+  {% else %}
+    {% set header_container_class = 'container-fluid' %}
+{% endif %}
 
 {% if page_content_container_type is defined %}
   {% if page_content_container_type is same as(false) %}
-    {% set content_container_class = '' %}
-  {% elseif page_content_container_type is same as(true) %}
-    {% set content_container_class = 'container' %}
-  {% else %}
-    {% set content_container_class = 'container-' ~ page_content_container_type %}
+      {% set content_container_class = '' %}
+    {% elseif page_content_container_type is same as(true) %}
+      {% set content_container_class = 'container' %}
+    {% else %}
+      {% set content_container_class = 'container-' ~ page_content_container_type %}
   {% endif %}
 {% else %}
   {% if not page.header %}
@@ -63,19 +71,26 @@
 %}
 
 <main{{content_attributes.addClass(page_main_classes)}}>
-	{% if page.header %}
+  {# Check and verify is there header #}
+	{% if page.header_paragraphs %}
 		<header class="page__header">
 			<div {{ page_header_container_attributes.addClass(page_header_container_classes) }}>
-				{% block page_header %}
+				{# Render header paragraphs #}
+        {# {% block page_header %}
 					{{ page.header }}
-				{% endblock %}
+				{% endblock %} #}
+        {% for paragraph in page.header_paragraphs %}
+          <div class="header-paragraph">
+            {{ paragraph }}
+          </div>
+        {% endfor %}  
 			</div>
 		</header>
 	{% endif %}
 
 	{% if page.content %}
     <div class="page__content" id="main-content">
-      <div {{ page_content_container_attributes.addClass(page_content_container_classes) }}>
+      <div class="container"{{ page_content_container_attributes.addClass(page_content_container_classes) }}>
         {% block page_inner_content %}
           {{ page.content }}
         {% endblock %}

@@ -45,3 +45,9 @@ a.btn.btn-link {
     color: $blue-iel-100;
   }
 }
+
+.fullwidth-wrapper {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  overflow: hidden;
+}
