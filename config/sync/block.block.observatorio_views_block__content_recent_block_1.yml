@@ -1,6 +1,6 @@
 uuid: f7631a9c-f5e7-4fa7-b638-0c9911b16a3c
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.content_recent
@@ -11,7 +11,7 @@ dependencies:
 id: observatorio_views_block__content_recent_block_1
 theme: observatorio
 region: header
-weight: -3
+weight: -5
 provider: null
 plugin: 'views_block:content_recent-block_1'
 settings:

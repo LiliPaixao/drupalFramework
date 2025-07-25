@@ -1,0 +1,30 @@
+uuid: e9a1eebc-9c14-45c2-88eb-58bc6d10a2fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.title_h3_e_descriptio_center.field_description
+    - field.field.paragraph.title_h3_e_descriptio_center.field_title
+    - paragraphs.paragraphs_type.title_h3_e_descriptio_center
+id: paragraph.title_h3_e_descriptio_center.preview
+targetEntityType: paragraph
+bundle: title_h3_e_descriptio_center
+mode: preview
+content:
+  field_description:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_title:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden: {  }

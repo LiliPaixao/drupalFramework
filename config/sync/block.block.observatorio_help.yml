@@ -8,8 +8,8 @@ dependencies:
     - observatorio
 id: observatorio_help
 theme: observatorio
-region: navbar_up
-weight: 0
+region: navbar_right
+weight: -7
 provider: null
 plugin: help_block
 settings:

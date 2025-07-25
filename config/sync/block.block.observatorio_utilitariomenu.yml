@@ -1,0 +1,25 @@
+uuid: 3c47544b-b3e5-48e9-ad7b-4157d4a4f8c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.utilities-menu
+  module:
+    - system
+  theme:
+    - observatorio
+id: observatorio_utilitariomenu
+theme: observatorio
+region: navbar_up
+weight: 0
+provider: null
+plugin: 'system_menu_block:utilities-menu'
+settings:
+  id: 'system_menu_block:utilities-menu'
+  label: 'Utilitário Menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

@@ -1,18 +1,18 @@
-uuid: ed8bbbf2-e735-458c-9ad5-d79e4e975515
+uuid: 4b25e8e3-2788-4bd7-a98a-8cdfeeeb4ba8
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_paragraphs
-    - node.type.page
-    - paragraphs.paragraphs_type.card_item
+    - block_content.type.carousel
+    - field.storage.block_content.field_carousel_items
+    - paragraphs.paragraphs_type.carousel_item
   module:
     - entity_reference_revisions
-id: node.page.field_paragraphs
-field_name: field_paragraphs
-entity_type: node
-bundle: page
-label: Paragraphs
+id: block_content.carousel.field_carousel_items
+field_name: field_carousel_items
+entity_type: block_content
+bundle: carousel
+label: 'Carousel items'
 description: ''
 required: false
 translatable: false
@@ -22,28 +22,28 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      card_item: card_item
-    negate: 1
+      carousel_item: carousel_item
+    negate: 0
     target_bundles_drag_drop:
       card_item:
-        weight: 7
-        enabled: true
-      card_list:
         weight: 8
+        enabled: false
+      card_list:
+        weight: 9
         enabled: false
       carousel_item:
         weight: 10
-        enabled: false
+        enabled: true
       faqs:
-        weight: 9
-        enabled: false
-      from_library:
-        weight: 10
-        enabled: false
-      header_hero_content:
         weight: 11
         enabled: false
-      layout_section:
+      from_library:
         weight: 12
+        enabled: false
+      header_hero_content:
+        weight: 13
+        enabled: false
+      layout_section:
+        weight: 14
         enabled: false
 field_type: entity_reference_revisions

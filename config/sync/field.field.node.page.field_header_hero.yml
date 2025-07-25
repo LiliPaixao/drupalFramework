@@ -1,18 +1,18 @@
-uuid: ed8bbbf2-e735-458c-9ad5-d79e4e975515
+uuid: 8cf632f0-394f-44ed-8a63-65322245f239
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_paragraphs
+    - field.storage.node.field_header_hero
     - node.type.page
-    - paragraphs.paragraphs_type.card_item
+    - paragraphs.paragraphs_type.header_hero_content
   module:
     - entity_reference_revisions
-id: node.page.field_paragraphs
-field_name: field_paragraphs
+id: node.page.field_header_hero
+field_name: field_header_hero
 entity_type: node
 bundle: page
-label: Paragraphs
+label: 'Header hero content'
 description: ''
 required: false
 translatable: false
@@ -22,28 +22,28 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      card_item: card_item
+      header_hero_content: header_hero_content
     negate: 1
     target_bundles_drag_drop:
       card_item:
-        weight: 7
-        enabled: true
-      card_list:
         weight: 8
+        enabled: false
+      card_list:
+        weight: 9
         enabled: false
       carousel_item:
         weight: 10
         enabled: false
       faqs:
-        weight: 9
-        enabled: false
-      from_library:
-        weight: 10
-        enabled: false
-      header_hero_content:
         weight: 11
         enabled: false
-      layout_section:
+      from_library:
         weight: 12
+        enabled: false
+      header_hero_content:
+        weight: 13
+        enabled: true
+      layout_section:
+        weight: 14
         enabled: false
 field_type: entity_reference_revisions

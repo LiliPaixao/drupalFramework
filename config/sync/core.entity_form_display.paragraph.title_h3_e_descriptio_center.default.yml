@@ -1,0 +1,32 @@
+uuid: c9ba2461-abaf-43d5-b9e6-aa32e9071301
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.title_h3_e_descriptio_center.field_description
+    - field.field.paragraph.title_h3_e_descriptio_center.field_title
+    - paragraphs.paragraphs_type.title_h3_e_descriptio_center
+id: paragraph.title_h3_e_descriptio_center.default
+targetEntityType: paragraph
+bundle: title_h3_e_descriptio_center
+mode: default
+content:
+  field_description:
+    type: string_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

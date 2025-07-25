@@ -1,0 +1,10 @@
+uuid: 9e7bade2-1f80-43c0-a245-5e32a66b8e6d
+langcode: en
+status: true
+dependencies: {  }
+id: title_h3_e_descriptio_center
+label: 'Título h3 e descrição centralizada'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

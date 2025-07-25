@@ -9,7 +9,7 @@ _core:
 id: observatorio_local_actions
 theme: observatorio
 region: header
-weight: -5
+weight: -7
 provider: null
 plugin: local_actions_block
 settings:

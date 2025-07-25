@@ -1,13 +1,13 @@
 uuid: 3d073517-59a4-4ae8-ad0b-c74ec0345bc0
 langcode: en
-status: true
+status: false
 dependencies:
   theme:
     - observatorio
 id: observatorio_tabs
 theme: observatorio
 region: header
-weight: -2
+weight: -4
 provider: null
 plugin: local_tasks_block
 settings:

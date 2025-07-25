@@ -8,8 +8,8 @@ dependencies:
     - observatorio
 id: observatorio_searchform
 theme: observatorio
-region: navbar_up
-weight: 0
+region: navbar_right
+weight: -6
 provider: null
 plugin: search_form_block
 settings:

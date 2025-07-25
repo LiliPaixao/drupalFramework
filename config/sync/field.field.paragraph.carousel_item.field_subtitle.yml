@@ -1,0 +1,22 @@
+uuid: c8a7553a-7b3f-4b2a-bb54-b9781fe33efd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subtitle
+    - paragraphs.paragraphs_type.carousel_item
+  module:
+    - text
+id: paragraph.carousel_item.field_subtitle
+field_name: field_subtitle
+entity_type: paragraph
+bundle: carousel_item
+label: subtitle
+description: Subtítulo
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long
