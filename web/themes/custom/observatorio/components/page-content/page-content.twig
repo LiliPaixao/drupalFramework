@@ -70,22 +70,17 @@
   ]|merge(page_content_container_utility_classes ?: [])
 %}
 
-<main{{content_attributes.addClass(page_main_classes)}}>
+<main{{ content_attributes.addClass(page_main_classes) }}>
   {# Check and verify is there header #}
-	{% if page.header_paragraphs %}
+	{% if page.header %}
 		<header class="page__header">
 			<div {{ page_header_container_attributes.addClass(page_header_container_classes) }}>
-				{# Render header paragraphs #}
-        {# {% block page_header %}
+				{# Render the page page.header wich contains the paragraph #}
 					{{ page.header }}
-				{% endblock %} #}
-        {% for paragraph in page.header_paragraphs %}
-          <div class="header-paragraph">
-            {{ paragraph }}
-          </div>
-        {% endfor %}  
-			</div>
+      </div>
 		</header>
+  {% else %}
+    <p>Header is empty</p>
 	{% endif %}
 
 	{% if page.content %}

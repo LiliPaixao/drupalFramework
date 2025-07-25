@@ -1,0 +1,22 @@
+{#
+/**
+* @file
+* Template for a Page Header component.
+#}
+
+{% set header_attributes = header_attributes ?: create_attribute() %}
+{% set header_classes = [
+    'page__header',
+] %}
+
+{% if page.header %}
+    <header {{ header_attributes.addClass(header_classes) }}>
+        <div class="container-fluid py-4">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+                {% block page_inner_header %}
+                    {{ page.header }}
+                {% endblock %}
+            </div>
+        </div>
+    </header>
+{% endif %}
