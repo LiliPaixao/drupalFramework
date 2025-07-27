@@ -32,6 +32,7 @@ module:
   history: 0
   image: 0
   imagemagick: 0
+  language: 0
   layout_builder: 0
   layout_builder_blocks: 0
   layout_builder_styles: 0
@@ -40,6 +41,7 @@ module:
   layout_paragraphs_library: 0
   layout_paragraphs_permissions: 0
   link: 0
+  locale: 0
   media: 0
   media_library: 0
   media_library_form_element: 0
@@ -61,12 +63,16 @@ module:
   system: 0
   taxonomy: 0
   text: 0
+  token: 0
   toolbar: 0
   tracer: 0
   twig_tweak: 0
   update: 0
   user: 0
+  views_bootstrap: 0
   views_ui: 0
+  pathauto: 1
+  content_translation: 10
   views: 10
   paragraphs: 11
   standard: 1000

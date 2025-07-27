@@ -7,23 +7,27 @@ dependencies:
     - field.field.paragraph.carousel_item.field_image
     - field.field.paragraph.carousel_item.field_subtitle
     - field.field.paragraph.carousel_item.field_title
-    - image.style.card_image
     - paragraphs.paragraphs_type.carousel_item
   module:
-    - media
+    - text
 id: paragraph.carousel_item.preview
 targetEntityType: paragraph
 bundle: carousel_item
 mode: preview
 content:
   field_image:
-    type: media_thumbnail
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      image_link: ''
-      image_style: card_image
-      image_loading:
-        attribute: lazy
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_subtitle:
+    type: text_default
+    label: above
+    settings: {  }
     third_party_settings: {  }
     weight: 2
     region: content
@@ -33,7 +37,6 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 3
+    weight: 1
     region: content
-hidden:
-  field_subtitle: true
+hidden: {  }

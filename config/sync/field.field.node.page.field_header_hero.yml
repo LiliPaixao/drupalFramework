@@ -23,7 +23,7 @@ settings:
   handler_settings:
     target_bundles:
       header_hero_content: header_hero_content
-    negate: 1
+    negate: 0
     target_bundles_drag_drop:
       card_item:
         weight: 8
@@ -45,5 +45,8 @@ settings:
         enabled: true
       layout_section:
         weight: 14
+        enabled: false
+      title_h3_e_descriptio_center:
+        weight: 16
         enabled: false
 field_type: entity_reference_revisions

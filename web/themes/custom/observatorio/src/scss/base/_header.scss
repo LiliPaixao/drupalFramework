@@ -3,30 +3,29 @@
 .header-hero {
   background-color: $blue-iel-700;
   margin-bottom: 5rem;
-}
 
-.header-hero h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: $white;
-}
+  h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $white;
+  }
 
-.header-hero h2 {
+  h2 {
   font-size: 1.75rem;
   color: $white;
-}
+  }
 
-.header-hero p {
-  font-size: 1.125rem;
-  color: $white;
-}
+  p {
+    font-size: 1.125rem;
+    color: $white;
+  }
 
-.header-hero img {
+  img {
   max-width: 100%;
   height: auto;
-}
+  }
 
-a.btn.btn-link {
+  a.btn.btn-link {
   text-decoration: none;
   color: $blue-iel-700;
   background-color: $blue-iel-100;
@@ -40,14 +39,11 @@ a.btn.btn-link {
   line-height: 1;
   cursor: pointer;
 
-  &:hover {
-    background-color: $white;
-    color: $blue-iel-100;
+    &:hover {
+      background-color: $white;
+      color: $blue-iel-100;
+    }
   }
 }
 
-.fullwidth-wrapper {
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  overflow: hidden;
-}
+

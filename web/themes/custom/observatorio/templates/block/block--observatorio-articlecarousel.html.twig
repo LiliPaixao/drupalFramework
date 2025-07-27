@@ -1,0 +1,16 @@
+{#
+/**
+* @file
+* Template for a block.
+#}
+{% embed 'themes/contrib/radix/components/block/block.twig' with {
+    html_tag: 'div',
+} %}
+
+    {% block content %}
+        {% include 'themes/custom/observatorio/components/carousel/carousel.twig' with {
+            content: content,
+        } %}
+    {% endblock %}
+
+{% endembed %}

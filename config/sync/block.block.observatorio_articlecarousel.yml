@@ -1,0 +1,25 @@
+uuid: 700acb9f-6aa1-4a4c-bf57-f7f5b517abbe
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:carousel:fc8da8c0-5f51-482b-9039-51c106abb7bf'
+  module:
+    - block_content
+  theme:
+    - observatorio
+id: observatorio_articlecarousel
+theme: observatorio
+region: header
+weight: -5
+provider: null
+plugin: 'block_content:fc8da8c0-5f51-482b-9039-51c106abb7bf'
+settings:
+  id: 'block_content:fc8da8c0-5f51-482b-9039-51c106abb7bf'
+  label: 'Article carousel'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

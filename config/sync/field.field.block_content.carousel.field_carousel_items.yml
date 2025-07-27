@@ -46,4 +46,7 @@ settings:
       layout_section:
         weight: 14
         enabled: false
+      title_h3_e_descriptio_center:
+        weight: 16
+        enabled: false
 field_type: entity_reference_revisions

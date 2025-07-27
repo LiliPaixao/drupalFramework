@@ -1,0 +1,38 @@
+uuid: ebb3183e-3d00-4253-b141-f8d103cd23e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.page_header
+  module:
+    - node
+    - system
+    - views
+  theme:
+    - observatorio
+id: observatorio_views_block__page_header_block_1
+theme: observatorio
+region: header
+weight: -9
+provider: null
+plugin: 'views_block:page_header-block_1'
+settings:
+  id: 'views_block:page_header-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      page: page
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

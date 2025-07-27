@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_paragraphs
     - node.type.page
-    - paragraphs.paragraphs_type.card_item
+    - paragraphs.paragraphs_type.header_hero_content
   module:
     - entity_reference_revisions
 id: node.page.field_paragraphs
@@ -22,12 +22,12 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      card_item: card_item
+      header_hero_content: header_hero_content
     negate: 1
     target_bundles_drag_drop:
       card_item:
         weight: 7
-        enabled: true
+        enabled: false
       card_list:
         weight: 8
         enabled: false
@@ -42,8 +42,11 @@ settings:
         enabled: false
       header_hero_content:
         weight: 11
-        enabled: false
+        enabled: true
       layout_section:
         weight: 12
+        enabled: false
+      title_h3_e_descriptio_center:
+        weight: 16
         enabled: false
 field_type: entity_reference_revisions

@@ -38,6 +38,7 @@
         "drupal/redirect": "^1.11",
         "drupal/search_api": "^1.38",
         "drupal/twig_tweak": "^3.4",
+        "drupal/views_bootstrap": "^5.5@RC",
         "drupal/webprofiler": "^10.3"
     },
     "conflict": {

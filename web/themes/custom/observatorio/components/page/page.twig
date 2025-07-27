@@ -27,29 +27,28 @@
   {% block page_navigation %}
 		{% include 'observatorio:page-navigation' %}
 	{% endblock %}
-
-  
+   
   {% block page_content %}
     {% include 'observatorio:page-content' with {
       page_header_container_type: 'fluid',
-      page_header_container_utility_classes: ['mb-3'],
+      page_header_container_utility_classes: ['mb-3', 'px-0'],
     }
     %}
   {% endblock %}
 
-	{% block page_footer %}
-		{% include 'observatorio:page-footer'  with {
+  {% block page_footer %}
+    {% include 'observatorio:page-footer'  with {
       footer_utility_classes: ['utility-class'],
       }
     %}
-	{% endblock %}
+  {% endblock %}
 
-  {# Novo rodapé inferior #}
-{% if page.footer_bottom %}
-  <div class="region-footer-bottom d-flex flex-wrap justify-content-md-between align-items-md-center py-3">
-    <div class="container">
-      {{ page.footer_bottom }}
+    {# Novo rodapé inferior #}
+  {% if page.footer_bottom %}
+    <div class="region-footer-bottom d-flex flex-wrap justify-content-md-between align-items-md-center py-3">
+      <div class="container">
+        {{ page.footer_bottom }}
+      </div>
     </div>
-  </div>
-{% endif %}
+  {% endif %}
 </div>
