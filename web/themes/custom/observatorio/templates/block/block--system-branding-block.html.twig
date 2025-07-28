@@ -13,7 +13,7 @@
  */
 #}
 {%
-  embed 'radix:block' with {
+  embed 'observatorio:block' with {
     block_utility_classes: [
       'block--system-branding',
     ],
@@ -25,8 +25,8 @@
         text: site_name,
         site_slogan,
         image: site_logo,
-        width: '40px',
-        height: 'auto',
+        width: 'auto',
+        height: '',
         path: path('<front>'),
         alt: elements.content.site_name['#markup'] ~ ' logo',
         navbar_brand_utility_classes: [
