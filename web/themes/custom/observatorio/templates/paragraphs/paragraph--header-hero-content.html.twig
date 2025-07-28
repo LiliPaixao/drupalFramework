@@ -1,28 +1,32 @@
 {# themes/custom/observatorio/templates/paragraph/paragraph--header-hero-content.html.twig #}
-<div {{ attributes.addClass('header-hero', 'd-flex', 'flex-column', 'flex-md-row', 'align-items-center', 'py-5', 'justify-content-center') }}>
-  <div class="text-content col-md-3 col-lg-5 col-xl-5 col-xxl-4 text-center text-md-start justify-content-center">
-    {% if content.field_title %}
-      <h1 class="mb-4">{{ content.field_title }}</h1>
-    {% endif %}
+<div {{ attributes.addClass('header-hero', 'd-flex', 'flex-md-row', 'align-items-start', 'py-5' ) }}>
+  <div class="container">
+    <div class="row w-100 d-flex justify-content-between align-items-center">
+      <div class="text-content col-12 col-sm-9 col-md-6 col-lg-6 col-xl-6 col-xxl-6 text-start text-md-start justify-content-center">
+        {% if content.field_title %}
+          <h1 class="mb-4">{{ content.field_title }}</h1>
+        {% endif %}
 
-    {% if content.field_subtitle %}
-      <h2 class="mb-3 text-muted">{{ content.field_subtitle }}</h2>
-    {% endif %}
+        {% if content.field_subtitle %}
+          <h2 class="mb-3 text-muted">{{ content.field_subtitle }}</h2>
+        {% endif %}
 
-    {% if content.field_description %}
-      <p class="lead">{{ content.field_description }}</p>
-    {% endif %}
+        {% if content.field_description %}
+          <p class="lead">{{ content.field_description }}</p>
+        {% endif %}
 
-    {% if paragraph.field_link.0.url %}
-      <a class="btn btn-link" href="{{ paragraph.field_link.0.url }}" role="button">
-        {{ paragraph.field_link.0.title ?: 'Clique aqui' }}
-      </a>
-    {% endif %}
-  </div>
+        {% if paragraph.field_link.0.url %}
+          <a class="btn btn-link" href="{{ paragraph.field_link.0.url }}" role="button">
+            {{ paragraph.field_link.0.title ?: 'Clique aqui' }}
+          </a>
+        {% endif %}
+      </div>
 
-  <div class="image-content col-md-5 text-center mt-4 mt-md-0">
-    {% if content.field_image %}
-      {{ content.field_image }}
-    {% endif %}
+      <div class= "image-content col-12 col-sm-9 col-md-5 text-start mt-4 mt-md-0">
+        {% if content.field_image %}
+          {{ content.field_image  }}
+        {% endif %}
+      </div>
+    </div>
   </div>
 </div>
