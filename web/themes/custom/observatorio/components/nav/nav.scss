@@ -1,1 +1,12 @@
 @import "../../src/scss/init";
+
+ul.nav.navbar-nav {
+    font-weight: 700;
+    font-size: 1.1rem;
+    align-items: baseline;
+}
+
+li.nav-item {
+    padding-right: 20px;
+}
+
