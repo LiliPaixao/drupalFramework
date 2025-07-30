@@ -1,0 +1,90 @@
+@import "colors";
+
+.header-hero {
+  background-color: $blue-iel-700;
+  margin-bottom: 5rem;
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $white;
+  }
+
+  p {
+    font-size: 1.125rem;
+    color: $white;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  a.btn.btn-link {
+    text-decoration: none;
+    color: $blue-iel-700;
+    background-color: $blue-iel-100;
+    border: 0;
+    border-radius: 5px;
+    align-items: center;
+    transition: color .15s ease, border-color .15s ease, background-color .15s ease;
+    font-weight: 600;
+    padding: 18px 40px;
+    font-size: 1rem;
+    line-height: 1;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+
+    &:hover {
+      background-color: $white;
+      color: $blue-iel-100;
+    }
+  }
+
+  /* Responsividade para telas pequenas */
+  @media (max-width: 767px) {
+    .header-hero {
+      display: block;
+    }
+
+    .text-content {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .image-content img {
+      width: 100%; /* A imagem vai ocupar 100% da largura em telas pequenas */
+    }
+
+    a.btn.btn-link {
+      display: block;
+      width: 100%;
+      text-align: center; /* Botão ocupará a largura total */
+    }
+  }
+
+  /* Para telas médias e maiores */
+  @media (min-width: 768px) {
+    .header-hero {
+      display: flex;
+    }
+
+    .image-content {
+      max-width: 50%; /* Limitar a largura da imagem */
+    }
+
+    .text-content {
+      max-width: 50%; /* Limitar a largura do texto */
+    }
+
+    .image-content img {
+      width: 100%; /* A imagem ocupa a largura total da coluna */
+    }
+
+    a.btn.btn-link {
+      width: auto;
+      display: inline-block;
+    }
+  }
+}

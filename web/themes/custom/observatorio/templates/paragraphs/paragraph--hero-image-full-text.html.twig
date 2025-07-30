@@ -1,0 +1,27 @@
+{# themes/custom/observatorio/templates/paragraph/paragraph--header-hero-content.html.twig #}
+<div {{ attributes.addClass('header-hero', 'd-flex', 'flex-md-row', 'align-items-start') }}>
+    <div class="row w-100 d-flex align-items-center">
+      <div class= "image-content col-12 col-md-5 text-start mt-4 mt-md-0">
+        {% if content.field_image %}
+          {{ content.field_image  }}
+        {% endif %}
+      </div>
+      
+      <div class="text-content col-12 col-md-4 text-start text-md-start pb-5 pb-md-0 ps-md-5">
+        {% if content.field_title %}
+          <h1 class="mb-4">{{ content.field_title }}</h1>
+        {% endif %}
+
+        {% if content.field_description %}
+          <p class="lead mb-4">{{ content.field_description['#items'][0].value }}</p>
+        {% endif %}
+
+        {% if paragraph.field_link.0.url %}
+          <a class="btn btn-link" href="{{ paragraph.field_link.0.url }}" role="button">
+            {{ paragraph.field_link.0.title ?: 'Clique aqui' }}
+          </a>
+        {% endif %}
+      </div>
+
+    </div>
+</div>

@@ -12,7 +12,7 @@
         {% endif %}
 
         {% if paragraph.field_link.0.url %}
-          <a class="btn btn-link" href="{{ paragraph.field_link.0.url }}" role="button">
+          <a class="btn btn-link btn-block-mobile" href="{{ paragraph.field_link.0.url }}" role="button">
             {{ paragraph.field_link.0.title ?: 'Clique aqui' }}
           </a>
         {% endif %}
