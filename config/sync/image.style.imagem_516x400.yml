@@ -1,0 +1,15 @@
+uuid: 6f6e2509-5157-4489-b11d-52f1aaae3b95
+langcode: en
+status: true
+dependencies: {  }
+name: imagem_516x400
+label: 'Imagem 516x400'
+effects:
+  108fe403-cacf-4abf-802a-d3a1b641502f:
+    uuid: 108fe403-cacf-4abf-802a-d3a1b641502f
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 516
+      height: 400
+      anchor: center-center

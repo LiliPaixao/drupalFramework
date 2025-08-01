@@ -1,0 +1,9 @@
+uuid: 5bc7e43c-433a-493c-a7e5-6307ffc128f0
+langcode: en
+status: true
+dependencies: {  }
+name: 'Tipo de curso'
+vid: tipo_de_curso
+description: null
+weight: 0
+new_revision: false

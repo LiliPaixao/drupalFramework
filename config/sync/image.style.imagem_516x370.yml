@@ -1,0 +1,15 @@
+uuid: ba8f3ee1-877a-4039-b29c-82bf74799782
+langcode: en
+status: true
+dependencies: {  }
+name: imagem_516x370
+label: 'Imagem 516x350'
+effects:
+  67007206-269c-44e3-aec1-e6b4fe0e010a:
+    uuid: 67007206-269c-44e3-aec1-e6b4fe0e010a
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 516
+      height: 350
+      anchor: center-center

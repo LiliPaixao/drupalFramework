@@ -1,0 +1,14 @@
+uuid: d72ac1de-3e7d-4ba9-bee1-f5996c869bfd
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.colaborator
+  module:
+    - user
+id: user_add_role_action.colaborator
+label: 'Add the Colaborador role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: colaborator

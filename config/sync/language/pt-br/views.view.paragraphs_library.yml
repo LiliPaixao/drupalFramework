@@ -1,0 +1,52 @@
+display:
+  default:
+    display_title: Principal
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filtrar
+          reset_button_label: Redefinir
+          exposed_sorts_label: 'Ordenar por'
+          sort_asc_label: Ascendente
+          sort_desc_label: Decrescente
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+          expose:
+            items_per_page_label: 'Itens por página'
+            items_per_page_options_all_label: '- Todos -'
+            offset_label: Deslocamento
+      fields:
+        label:
+          label: Rótulo
+          separator: ', '
+        type:
+          label: Tipo
+          separator: ', '
+        paragraphs__target_id:
+          label: Parágrafos
+          separator: ', '
+        langcode:
+          label: Idioma
+          separator: ', '
+        id:
+          label: ID
+          separator: ', '
+        changed:
+          label: Alterado
+          separator: ', '
+        operations:
+          label: Operações
+      filters:
+        label:
+          expose:
+            label: Rótulo
+          group_info:
+            label: Rótulo
+        type:
+          expose:
+            label: Tipo
+  page_1:
+    display_title: Página

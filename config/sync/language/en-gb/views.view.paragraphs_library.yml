@@ -1,0 +1,29 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filter
+          reset_button_label: Reset
+      fields:
+        label:
+          label: Label
+        type:
+          label: Type
+        langcode:
+          label: Language
+        id:
+          label: ID
+        operations:
+          label: Operations
+      filters:
+        label:
+          expose:
+            label: Label
+          group_info:
+            label: Label
+        type:
+          expose:
+            label: Type
+  page_1:
+    display_title: Page

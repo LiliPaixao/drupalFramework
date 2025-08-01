@@ -1,0 +1,29 @@
+uuid: 95c51b0d-b151-48f0-b234-152527b1c0d3
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+  theme:
+    - observatorio
+id: observatorio_languageswitcher
+theme: observatorio
+region: navbar_up
+weight: -9
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Language switcher'
+  label_display: '0'
+  provider: language
+visibility:
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      en: en
+      pt-br: pt-br
+      es: es

@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.card_item.field_description
+    - field.field.paragraph.card_item.field_caption
     - field.field.paragraph.card_item.field_image
     - field.field.paragraph.card_item.field_title
     - image.style.card_image
@@ -15,12 +15,12 @@ targetEntityType: paragraph
 bundle: card_item
 mode: default
 content:
-  field_description:
+  field_caption:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 4
+    weight: 5
     region: content
   field_image:
     type: media_thumbnail

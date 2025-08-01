@@ -1,0 +1,47 @@
+uuid: cf7525e0-5f66-454f-a5f9-edbf23ed522b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.hero_image_full_text.field_description
+    - field.field.paragraph.hero_image_full_text.field_image
+    - field.field.paragraph.hero_image_full_text.field_link
+    - field.field.paragraph.hero_image_full_text.field_title
+    - image.style.card_image
+    - paragraphs.paragraphs_type.hero_image_full_text
+  module:
+    - media
+id: paragraph.hero_image_full_text.preview
+targetEntityType: paragraph
+bundle: hero_image_full_text
+mode: preview
+content:
+  field_description:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: card_image
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_title:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  field_link: true

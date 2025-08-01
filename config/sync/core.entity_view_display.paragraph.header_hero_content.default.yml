@@ -6,12 +6,12 @@ dependencies:
     - field.field.paragraph.header_hero_content.field_description
     - field.field.paragraph.header_hero_content.field_image
     - field.field.paragraph.header_hero_content.field_link
-    - field.field.paragraph.header_hero_content.field_subtitle
     - field.field.paragraph.header_hero_content.field_title
+    - image.style.imagem_516x370
     - paragraphs.paragraphs_type.header_hero_content
   module:
     - link
-    - text
+    - media
 id: paragraph.header_hero_content.default
 targetEntityType: paragraph
 bundle: header_hero_content
@@ -25,11 +25,13 @@ content:
     weight: 4
     region: content
   field_image:
-    type: entity_reference_entity_view
+    type: media_thumbnail
     label: hidden
     settings:
-      view_mode: default
-      link: false
+      image_link: ''
+      image_style: imagem_516x370
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
     weight: 3
     region: content
@@ -44,13 +46,6 @@ content:
       target: ''
     third_party_settings: {  }
     weight: 2
-    region: content
-  field_subtitle:
-    type: text_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 1
     region: content
   field_title:
     type: string

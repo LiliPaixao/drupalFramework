@@ -1,0 +1,18 @@
+uuid: 05fa4569-b1a4-4462-ab18-69b8295bb9bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.hero_without_space
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.hero_without_space
+target_entity_type_id: paragraph
+target_bundle: hero_without_space
+default_langcode: site_default
+language_alterable: false

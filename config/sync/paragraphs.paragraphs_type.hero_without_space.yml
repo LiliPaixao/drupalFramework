@@ -1,0 +1,10 @@
+uuid: 1fdb7b10-b510-4ef6-9e32-de66eb6bb347
+langcode: en
+status: true
+dependencies: {  }
+id: hero_without_space
+label: 'Hero sem espaço'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

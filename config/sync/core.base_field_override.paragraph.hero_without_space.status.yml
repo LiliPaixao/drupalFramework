@@ -1,0 +1,22 @@
+uuid: 605d3f79-acbd-430e-83e5-61b0980dd70b
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.hero_without_space
+id: paragraph.hero_without_space.status
+field_name: status
+entity_type: paragraph
+bundle: hero_without_space
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

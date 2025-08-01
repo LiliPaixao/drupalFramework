@@ -1,0 +1,20 @@
+uuid: 431e02fa-c515-455f-83cb-a049442cba36
+langcode: en
+status: true
+dependencies:
+  theme:
+    - observatorio
+id: observatorio_tabs_2
+theme: observatorio
+region: content
+weight: -10
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

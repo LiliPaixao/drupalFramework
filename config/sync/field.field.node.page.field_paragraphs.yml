@@ -43,6 +43,9 @@ settings:
       header_hero_content:
         weight: 11
         enabled: true
+      hero_without_space:
+        weight: 16
+        enabled: false
       layout_section:
         weight: 12
         enabled: false

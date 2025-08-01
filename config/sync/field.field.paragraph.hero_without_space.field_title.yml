@@ -1,0 +1,19 @@
+uuid: c455ba0b-3e91-4d6e-9e23-40eff9b154e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.hero_without_space
+id: paragraph.hero_without_space.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: hero_without_space
+label: title
+description: 'Título principal'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

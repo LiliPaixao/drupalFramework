@@ -1,0 +1,22 @@
+uuid: e5976e79-9535-4478-90c3-64c2002c7cc3
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tipo_de_curso
+id: taxonomy_term.tipo_de_curso.status
+field_name: status
+entity_type: taxonomy_term
+bundle: tipo_de_curso
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

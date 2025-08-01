@@ -6,6 +6,10 @@ dependencies:
     - field.storage.node.field_header_hero
     - node.type.page
     - paragraphs.paragraphs_type.header_hero_content
+    - paragraphs.paragraphs_type.hero_image_full_text
+    - paragraphs.paragraphs_type.hero_text
+    - paragraphs.paragraphs_type.hero_text_link
+    - paragraphs.paragraphs_type.hero_without_space
   module:
     - entity_reference_revisions
 id: node.page.field_header_hero
@@ -23,6 +27,10 @@ settings:
   handler_settings:
     target_bundles:
       header_hero_content: header_hero_content
+      hero_without_space: hero_without_space
+      hero_image_full_text: hero_image_full_text
+      hero_text: hero_text
+      hero_text_link: hero_text_link
     negate: 0
     target_bundles_drag_drop:
       card_item:
@@ -42,6 +50,18 @@ settings:
         enabled: false
       header_hero_content:
         weight: 13
+        enabled: true
+      hero_image_full_text:
+        weight: 17
+        enabled: true
+      hero_text:
+        weight: 19
+        enabled: true
+      hero_text_link:
+        weight: 21
+        enabled: true
+      hero_without_space:
+        weight: 16
         enabled: true
       layout_section:
         weight: 14

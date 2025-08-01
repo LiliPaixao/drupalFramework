@@ -1,0 +1,18 @@
+uuid: 77ad3855-67a4-408e-a087-1b61931d6d18
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tipo_de_curso
+id: taxonomy_term.tipo_de_curso.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: tipo_de_curso
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

@@ -1,0 +1,22 @@
+uuid: 5da78b5c-21fa-4ffa-ae02-4ade696c61fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.title_h3_e_descriptio_center
+id: paragraph.title_h3_e_descriptio_center.status
+field_name: status
+entity_type: paragraph
+bundle: title_h3_e_descriptio_center
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

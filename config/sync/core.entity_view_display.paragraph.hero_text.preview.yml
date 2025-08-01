@@ -1,0 +1,30 @@
+uuid: 7e5320d7-3253-490b-8e3a-0dab56530d33
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.hero_text.field_description
+    - field.field.paragraph.hero_text.field_title
+    - paragraphs.paragraphs_type.hero_text
+id: paragraph.hero_text.preview
+targetEntityType: paragraph
+bundle: hero_text
+mode: preview
+content:
+  field_description:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_title:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden: {  }

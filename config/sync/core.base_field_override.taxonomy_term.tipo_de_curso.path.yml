@@ -1,0 +1,20 @@
+uuid: 971df847-bb2a-450c-9aa8-32889a46d2ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tipo_de_curso
+  module:
+    - path
+id: taxonomy_term.tipo_de_curso.path
+field_name: path
+entity_type: taxonomy_term
+bundle: tipo_de_curso
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

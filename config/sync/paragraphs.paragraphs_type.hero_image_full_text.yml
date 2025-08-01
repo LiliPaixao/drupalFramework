@@ -1,0 +1,10 @@
+uuid: d84792a0-22aa-40aa-8760-bdc536b32eda
+langcode: en
+status: true
+dependencies: {  }
+id: hero_image_full_text
+label: 'Hero imagem e texto'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

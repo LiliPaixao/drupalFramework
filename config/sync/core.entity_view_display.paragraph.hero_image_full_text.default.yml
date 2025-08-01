@@ -1,0 +1,58 @@
+uuid: 88e268a5-acfc-475c-888e-979a0271c058
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero_image_full_text.field_description
+    - field.field.paragraph.hero_image_full_text.field_image
+    - field.field.paragraph.hero_image_full_text.field_link
+    - field.field.paragraph.hero_image_full_text.field_title
+    - image.style.imagem_769x400
+    - paragraphs.paragraphs_type.hero_image_full_text
+  module:
+    - link
+    - media
+id: paragraph.hero_image_full_text.default
+targetEntityType: paragraph
+bundle: hero_image_full_text
+mode: default
+content:
+  field_description:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: imagem_769x400
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden: {  }

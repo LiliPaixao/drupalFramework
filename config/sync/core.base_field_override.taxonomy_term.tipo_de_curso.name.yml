@@ -1,0 +1,18 @@
+uuid: 4df98f31-3702-4f17-abb3-365e316a54ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tipo_de_curso
+id: taxonomy_term.tipo_de_curso.name
+field_name: name
+entity_type: taxonomy_term
+bundle: tipo_de_curso
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

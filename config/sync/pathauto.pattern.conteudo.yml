@@ -1,0 +1,14 @@
+uuid: bac60e95-0a2d-4996-a690-3d524d118fb4
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: conteudo
+label: conteudo
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }

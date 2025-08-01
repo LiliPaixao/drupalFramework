@@ -1,0 +1,15 @@
+uuid: 81202378-fc38-4e7f-8897-976e506e3260
+langcode: en
+status: true
+dependencies: {  }
+name: imagem_769x400
+label: 'Imagem 769x400'
+effects:
+  73d51f65-23f7-4271-b7ef-247cf526d64c:
+    uuid: 73d51f65-23f7-4271-b7ef-247cf526d64c
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 769
+      height: 400
+      anchor: center-center

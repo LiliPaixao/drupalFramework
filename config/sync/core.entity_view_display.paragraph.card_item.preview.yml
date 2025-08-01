@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
-    - field.field.paragraph.card_item.field_description
+    - field.field.paragraph.card_item.field_caption
     - field.field.paragraph.card_item.field_image
     - field.field.paragraph.card_item.field_title
     - image.style.card_image
@@ -21,13 +21,6 @@ targetEntityType: paragraph
 bundle: card_item
 mode: preview
 content:
-  field_description:
-    type: basic_string
-    label: inline
-    settings: {  }
-    third_party_settings: {  }
-    weight: 4
-    region: content
   field_image:
     type: media_thumbnail
     label: hidden
@@ -47,4 +40,5 @@ content:
     third_party_settings: {  }
     weight: 3
     region: content
-hidden: {  }
+hidden:
+  field_caption: true
