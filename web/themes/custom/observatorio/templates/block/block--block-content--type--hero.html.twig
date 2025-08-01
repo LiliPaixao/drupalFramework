@@ -71,37 +71,9 @@
 
      {% block block_content %}
       {% if content %}
-        {# Mantém a estrutura do bloco e aplica as classes necessárias #}
-        
-        <div {{ attributes.addClass('header-hero', 'd-flex', 'flex-md-row', 'align-items-start') }}>
-          <div class="container">
-              <div class="row d-flex justify-content-between align-items-center">
-              <div class="text-content col-12 col-sm-9 col-md-6 col-lg-6 col-xl-6 col-xxl-6 text-start text-md-start justify-content-center pt-5 pt-md-0">
-                  {% if content.field_title %}
-                  <h1 class="mb-4" >{{ content.field_title }}</h1>
-                  {% endif %}
-              
-                  {% if content.field_description %}
-                  <p class="lead">{{ content.field_description[0]['#context']['value'] }}</p>
-                  {% endif %}
-                  
-                  {% if content.field_link %}
-                  <a class="btn btn-link btn-block-mobile" href="{{ content.field_link[0]['#url'] }}">{{ content.field_link[0]['#title'] }}</a>
-                  {% endif %}
-              </div>
-              
-              <div class="image-content col-12 col-sm-9 col-md-4 text-end mt-4 mt-md-0">
-                  {% if content.field_image %}
-                  {% set image = content.field_image[0] %}
-                      {% set image_url = file_url(image['#item'].entity.uri.value) %}
-                      <img src="{{ image_url }}" alt="{{ image['#item'].alt }}" />
-                  {% endif %}
-              </div>
-              </div>
-          </div>
-        </div> 
-          
-
+                
+        {# Inclusão do componente hero.twig conforme boas práticas #}
+        {% include '@observatorio/components/hero/hero.twig' with { content: content, attributes: attributes } %}
       {% endif %}
     {% endblock %}
 
