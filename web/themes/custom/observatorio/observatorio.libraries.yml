@@ -1,8 +1,12 @@
 style:
   css:
     theme:
+      #Google Fonts
       https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap: {}
+      
+      #Main archives
       build/css/main.style.css: {}
+
   js:
     build/js/main.script.js: {}
   dependencies:

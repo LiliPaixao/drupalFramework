@@ -16,5 +16,6 @@
     "/components/navbar/navbar.css": "/components/navbar/navbar.css",
     "/components/navbar-brand/navbar-brand.css": "/components/navbar-brand/navbar-brand.css",
     "/components/nav/nav.css": "/components/nav/nav.css",
-    "/components/nav-item/nav-item.css": "/components/nav-item/nav-item.css"
+    "/components/nav-item/nav-item.css": "/components/nav-item/nav-item.css",
+    "/components/hero/hero.css": "/components/hero/hero.css"
 }

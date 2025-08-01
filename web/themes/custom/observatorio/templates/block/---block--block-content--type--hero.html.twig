@@ -1,0 +1,28 @@
+<div {{ attributes.addClass('header-hero', 'd-flex', 'flex-md-row', 'align-items-start') }}>
+  <div class="container">
+    <div class="row w-100 d-flex justify-content-between align-items-center">
+      <div class="text-content col-12 col-sm-9 col-md-6 col-lg-6 col-xl-6 col-xxl-6 text-start text-md-start justify-content-center pt-5 pt-md-0">
+        {% if content.field_title %}
+          <h1 class="mb-4" >{{ content.field_title }}</h1>
+        {% endif %}
+       
+        {% if content.field_description %}
+          <p class="lead">{{ content.field_description[0]['#context']['value'] }}</p>
+        {% endif %}
+        
+        {% if content.field_link %}
+          <a href="{{ content.field_link[0]['#url'] }}" class="btn btn-primary">{{ content.field_link[0]['#title'] }}</a>
+        {% endif %}
+      </div>
+     
+      <div class="image-content col-12 col-sm-9 col-md-5 text-start mt-4 mt-md-0">
+      
+        {% if content.field_image %}
+          <img src="{{ file_url(content.field_image[0]['#url']) }}" alt="{{ content.field_image.0.item.values.alt }}" class="img-fluid">
+          {{content.field_image}}
+        {% endif %}
+     
+      </div>
+    </div>
+  </div>
+</div>

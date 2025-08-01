@@ -13,10 +13,8 @@
 @import "base/variables";
 
 // Include components
-@import "base/hero";
+//@import "base/hero";
+@import "../../components/hero/hero";
 @import "base/footer";
-@import "../../components/navbar/navbar.scss";
-
-// Include colors
-@import 'base/colors';
+@import "../../components/navbar/navbar";
 

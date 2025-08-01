@@ -1,15 +1,13 @@
 {#
 /**
- * @file
- * Template for the main page.
+ * Template for landing page node.
+ *
+ * This template is used for the landing page node type.
  */
 #}
+
 {% set page_attributes = attributes ?: create_attribute() %}
-{% set 
-  page_classes = [
-    'page',
-  ]|merge(page_utility_classes ?: []) 
-%}
+{% set page_classes = ['page']|merge(page_utility_classes ?: []) %}
 
 {# Navbar superior #}
 {% if page.navbar_up %}
@@ -20,30 +18,42 @@
   </div>
 {% endif %}
 
-
-
 <div {{ page_attributes.addClass(page_classes) }}>
-	
+
   {% block page_navigation %}
-		{% include 'observatorio:page-navigation' %}
-	{% endblock %}
-   
+    {% include 'observatorio:page-navigation' %}
+  {% endblock %}
+
   {% block page_content %}
-    {% include 'observatorio:page-content' with {
-      page_header_container_type: 'fluid',
-      page_header_container_utility_classes: ['mb-3', 'px-0'],
-    }
-    %}
+    <main{{ content_attributes.addClass(page_main_classes) }}>
+      {# Check if there is a header #}
+      {% if page.header %}
+        <header class="page__header">
+          <div {{ page_header_container_attributes.addClass(page_header_container_classes) }}>
+            {# Render the page header which contains the paragraph #}
+            {{ page.header }}
+          </div>
+        </header>
+      {% endif %}
+
+      {% if page.content %}
+        <div class="page__content" id="main-content">
+          {# Removed the 'container' class for the landing page #}
+          <div {{ page_content_container_attributes.addClass(page_content_container_classes) }}>
+            {% block page_inner_content %}
+              {{ page.content }}
+            {% endblock %}
+          </div>
+        </div>
+      {% endif %}
+    </main>
   {% endblock %}
 
   {% block page_footer %}
-    {% include 'observatorio:page-footer'  with {
-      footer_utility_classes: ['utility-class'],
-      }
-    %}
+    {% include 'observatorio:page-footer' with { footer_utility_classes: ['utility-class'] } %}
   {% endblock %}
 
-    {# Novo rodapé inferior #}
+  {# New bottom footer #}
   {% if page.footer_bottom %}
     <div class="region-footer-bottom d-flex flex-wrap justify-content-md-between align-items-md-center py-3">
       <div class="container">
