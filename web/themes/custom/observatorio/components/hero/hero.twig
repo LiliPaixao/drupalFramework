@@ -13,8 +13,8 @@
             {% endif %}
             
             {% if hero_two_links_mode and content.field_link and content.field_second_link %}
-              <div class="d-flex gap-2 justify-content-center">
-                <a class="btn btn-link" href="{{ content.field_link[0]['#url'] }}">{{ content.field_link[0]['#title'] }}</a>
+              <div class="d-block d-md-flex gap-2 justify-content-center">
+                <a class="btn btn-link mb-2 mb-md-0" href="{{ content.field_link[0]['#url'] }}">{{ content.field_link[0]['#title'] }}</a>
                 <a class="btn btn-outline-primary" href="{{ content.field_second_link[0]['#url'] }}">{{ content.field_second_link[0]['#title'] }}</a>
               </div>
             {% elseif content.field_link %}
