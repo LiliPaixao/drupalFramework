@@ -1,0 +1,8 @@
+{% extends '@observatorio/components/block/block.twig' %}
+
+{# Sobrescreve apenas o bloco de conteúdo para incluir o hero.twig #}
+{% block block_content %}
+  {% if content %}
+    {% include '@observatorio/components/hero/hero.twig' with { content: content, attributes: attributes, hero_two_links_mode: true } %}
+  {% endif %}
+{% endblock %}
