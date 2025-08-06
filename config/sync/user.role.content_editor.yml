@@ -3,10 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
+    - block_content.type.hero
     - node.type.article
     - node.type.page
     - taxonomy.vocabulary.tags
   module:
+    - block_content
     - comment
     - contextual
     - file
@@ -29,19 +31,25 @@ permissions:
   - 'access toolbar'
   - 'administer url aliases'
   - 'create article content'
+  - 'create hero block content'
   - 'create page content'
   - 'create terms in tags'
   - 'create url aliases'
+  - 'delete any hero block content'
+  - 'delete any hero block content revisions'
   - 'delete article revisions'
   - 'delete own article content'
   - 'delete own files'
   - 'delete own page content'
   - 'delete page revisions'
+  - 'edit any hero block content'
   - 'edit own article content'
   - 'edit own comments'
   - 'edit own page content'
   - 'edit terms in tags'
   - 'revert all revisions'
+  - 'revert any hero block content revisions'
   - 'view all revisions'
+  - 'view any hero block content history'
   - 'view own unpublished content'
   - 'view the administration theme'

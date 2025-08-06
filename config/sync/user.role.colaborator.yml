@@ -1,9 +1,19 @@
 uuid: 397f4b17-9c28-415d-85ce-c15de1fa00d8
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - block_content.type.hero
+  module:
+    - block_content
 id: colaborator
 label: Colaborador
 weight: -7
 is_admin: null
-permissions: {  }
+permissions:
+  - 'create hero block content'
+  - 'delete any hero block content'
+  - 'delete any hero block content revisions'
+  - 'edit any hero block content'
+  - 'revert any hero block content revisions'
+  - 'view any hero block content history'

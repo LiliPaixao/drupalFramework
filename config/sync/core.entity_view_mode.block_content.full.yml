@@ -8,6 +8,6 @@ _core:
   default_config_hash: Q7yUUYeRLByl-MCGveKKF_KhAtNICLCMJuKWfugCvso
 id: block_content.full
 label: Full
-description: ''
+description: 'Hero com título e texto (lado esquerdo) e imagem ao lado direito'
 targetEntityType: block_content
 cache: true
