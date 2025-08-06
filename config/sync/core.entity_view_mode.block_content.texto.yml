@@ -1,0 +1,11 @@
+uuid: 6b24e012-0013-4292-8438-d24785e3e1e1
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.texto
+label: Texto
+description: 'Hero com título e texto '
+targetEntityType: block_content
+cache: true

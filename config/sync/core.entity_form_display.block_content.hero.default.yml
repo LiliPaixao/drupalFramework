@@ -7,6 +7,7 @@ dependencies:
     - field.field.block_content.hero.field_description
     - field.field.block_content.hero.field_image
     - field.field.block_content.hero.field_link
+    - field.field.block_content.hero.field_second_link
     - field.field.block_content.hero.field_title
     - image.style.thumbnail
   module:
@@ -36,6 +37,14 @@ content:
   field_link:
     type: link_default
     weight: 3
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_second_link:
+    type: link_default
+    weight: 27
     region: content
     settings:
       placeholder_url: ''

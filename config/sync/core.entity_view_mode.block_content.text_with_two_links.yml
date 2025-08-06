@@ -1,0 +1,11 @@
+uuid: ed5dc42f-58d4-4e62-b223-85d1d13b23a2
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.text_with_two_links
+label: 'Texto com dois links'
+description: 'Hero com título, texto e dois links'
+targetEntityType: block_content
+cache: true

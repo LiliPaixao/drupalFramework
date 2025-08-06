@@ -8,6 +8,7 @@ dependencies:
     - field.field.block_content.hero.field_description
     - field.field.block_content.hero.field_image
     - field.field.block_content.hero.field_link
+    - field.field.block_content.hero.field_second_link
     - field.field.block_content.hero.field_title
   module:
     - image
@@ -55,4 +56,5 @@ content:
     region: content
 hidden:
   field_description: true
+  field_second_link: true
   langcode: true
