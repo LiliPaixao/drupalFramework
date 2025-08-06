@@ -31,7 +31,7 @@
 {% for type, messages in message_list %}
   <div role="region" aria-label="{{ status_headings[type] }}"{{ attributes|without('role', 'aria-label') }}>
     {%
-      embed 'radix:alert' with {
+      embed 'observatorio:alert' with {
         type: types[type],
       }
     %}
