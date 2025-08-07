@@ -12,8 +12,10 @@ dependencies:
   module:
     - image
     - node
+    - slick_views
     - text
     - user
+    - views_bootstrap
 id: carrossel_de_artigos
 label: 'Carrossel de Artigos'
 module: views
@@ -469,23 +471,24 @@ display:
           value:
             article: article
       style:
-        type: grid_responsive
+        type: views_bootstrap_accordion
         options:
           grouping: {  }
-          columns: 4
-          cell_min_width: 100
-          grid_gutter: 10
-          alignment: horizontal
+          panel_output: single
+          panel_title_field: title
+          flush: false
+          behavior: closed
+          sections:
+            first: 0
+            middle: 0
+            last: 0
       row:
         type: fields
         options:
           default_field_elements: true
-          inline:
-            title: title
-            field_tags: field_tags
-            created: created
+          inline: {  }
           separator: '|'
-          hide_empty: true
+          hide_empty: false
       query:
         type: views_query
         options:
@@ -580,7 +583,27 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+      style:
+        type: grid_responsive
+        options:
+          grouping: {  }
+          columns: 4
+          cell_min_width: 100
+          grid_gutter: 10
+          alignment: horizontal
+      row:
+        type: fields
+        options:
+          default_field_elements: true
+          inline:
+            title: title
+            field_tags: field_tags
+            created: created
+          separator: '|'
+          hide_empty: false
       defaults:
+        style: false
+        row: false
         fields: false
       exposed_block: true
       display_extenders: {  }
@@ -932,8 +955,127 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+      style:
+        type: views_bootstrap_grid
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          grid_class: ''
+          col_xs: col-3
+          col_sm: none
+          col_md: none
+          col_lg: none
+          col_xl: none
+          col_xxl: none
+      row:
+        type: fields
+        options:
+          default_field_elements: true
+          inline:
+            title: title
+            field_tags: field_tags
+            created: created
+          separator: '|'
+          hide_empty: false
       defaults:
+        style: false
+        row: false
         fields: false
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_image'
+        - 'config:field.storage.node.field_tags'
+  block_3:
+    id: block_3
+    display_title: 'Block 3'
+    display_plugin: block
+    position: 3
+    display_options:
+      pager:
+        type: full
+        options:
+          offset: 1
+          pagination_heading_level: h4
+          items_per_page: 4
+          total_pages: null
+          id: 0
+          tags:
+            next: 'Next ›'
+            previous: '‹ Previous'
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 9
+      style:
+        type: slick
+        options:
+          caption:
+            body: body
+            field_image: field_image
+            field_tags: field_tags
+            title: title
+            created: '0'
+          optionset: default
+          class: title
+          image: field_image
+          link: title
+          overlay: field_image
+          title: title
+          vanilla: false
+          layout: center
+          cache: 0
+          admin_uri: '/admin/structure/views/ajax/display/carrossel_de_artigos/block_3/style_options?_wrapper_format=drupal_ajax'
+          grid: ''
+          grid_medium: ''
+          grid_small: ''
+          style: flexbox
+          skin: default
+          overridables:
+            arrows: '0'
+            autoplay: '0'
+            dots: '0'
+            draggable: '0'
+            infinite: '0'
+            mouseWheel: '0'
+            randomize: '0'
+            variableWidth: '0'
+          thumbnail: field_image
+          optionset_thumbnail: default
+          skin_thumbnail: asnavfor
+          thumbnail_caption: title
+          thumbnail_effect: hover
+          thumbnail_position: ''
+          override: false
+          preserve_keys: false
+          visible_items: null
+      row:
+        type: fields
+        options:
+          default_field_elements: true
+          inline: {  }
+          separator: '|'
+          hide_empty: false
+      defaults:
+        pager: false
+        style: false
+        row: false
       display_extenders: {  }
     cache_metadata:
       max-age: -1

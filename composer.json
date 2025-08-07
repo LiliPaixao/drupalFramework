@@ -37,6 +37,9 @@
         "drupal/radix": "^6.0",
         "drupal/redirect": "^1.11",
         "drupal/search_api": "^1.38",
+        "drupal/slick": "^3.0",
+        "drupal/slick_ui": "^3.0",
+        "drupal/slick_views": "^3.0",
         "drupal/twig_tweak": "^3.4",
         "drupal/views_bootstrap": "^5.5@RC",
         "drupal/webprofiler": "^10.3"

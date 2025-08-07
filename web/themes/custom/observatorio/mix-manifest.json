@@ -1,9 +1,10 @@
 {
     "/build/js/main.script.js": "/build/js/main.script.js",
-    "/components/field/field.css": "/components/field/field.css",
-    "/components/dropdown/dropdown.css": "/components/dropdown/dropdown.css",
+    "/components/card_test/card_test.js": "/components/card_test/card_test.js",
     "/components/dropdown-menu/dropdown-menu.css": "/components/dropdown-menu/dropdown-menu.css",
+    "/components/card_test/card_test.css": "/components/card_test/card_test.css",
     "/components/block/block.css": "/components/block/block.css",
+    "/components/alert/alert.css": "/components/alert/alert.css",
     "/build/css/main.style.css": "/build/css/main.style.css",
     "/components/views-view/views-view.css": "/components/views-view/views-view.css",
     "/components/views-view--unformatted/views-view--unformatted.css": "/components/views-view--unformatted/views-view--unformatted.css",
@@ -17,5 +18,7 @@
     "/components/navbar-brand/navbar-brand.css": "/components/navbar-brand/navbar-brand.css",
     "/components/nav/nav.css": "/components/nav/nav.css",
     "/components/nav-item/nav-item.css": "/components/nav-item/nav-item.css",
-    "/components/hero/hero.css": "/components/hero/hero.css"
+    "/components/hero/hero.css": "/components/hero/hero.css",
+    "/components/field/field.css": "/components/field/field.css",
+    "/components/dropdown/dropdown.css": "/components/dropdown/dropdown.css"
 }

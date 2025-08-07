@@ -1,10 +1,10 @@
 style:
   css:
     theme:
-      #Google Fonts
+      # Google Fonts
       https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap: {}
       
-      #Main archives
+      # Main archives
       build/css/main.style.css: {}
 
   js:
@@ -65,3 +65,12 @@ jquery.validate:
     src/js/overrides/validate.js: {}
   dependencies:
     - core/jquery
+
+slick:
+  version: 1.8.1
+  js:
+    themes/custom/observatorio/libraries/slick/slick.min.js: { type: external, scope: footer }
+  css:
+    theme:
+      themes/custom/observatorio/libraries/slick/slick.css: {}
+      themes/custom/observatorio/libraries/slick/slick-theme.css: {}
