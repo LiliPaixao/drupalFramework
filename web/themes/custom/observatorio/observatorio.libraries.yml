@@ -67,10 +67,10 @@ jquery.validate:
     - core/jquery
 
 slick:
-  version: 1.8.1
+  version: 1.8.0
   js:
-    themes/custom/observatorio/libraries/slick/slick.min.js: { type: external, scope: footer }
+    libraries/slick/slick/slick.min.js: { type: external, scope: footer }
   css:
     theme:
-      themes/custom/observatorio/libraries/slick/slick.css: {}
-      themes/custom/observatorio/libraries/slick/slick-theme.css: {}
+      libraries/slick/slick/slick.css: {}
+      libraries/slick/slick/slick-theme.css: {}

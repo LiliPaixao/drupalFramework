@@ -35,3 +35,4 @@ function observatorio_preprocess_page(array &$variables): void {
     }
   }
 }
+

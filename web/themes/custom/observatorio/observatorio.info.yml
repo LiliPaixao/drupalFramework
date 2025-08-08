@@ -23,7 +23,7 @@ libraries:
   - observatorio/global
   - observatorio/global-styling
   - observatorio/style
-  - observatorio/slick
+  - slick
 ckeditor5-stylesheets:
   - build/css/main.style.css
 libraries-extend:
