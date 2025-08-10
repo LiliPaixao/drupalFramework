@@ -1,0 +1,13 @@
+diff --git a/config_partial_export.info.yml b/config_partial_export.info.yml
+index 17a194e..9d6d86a 100644
+--- a/config_partial_export.info.yml
++++ b/config_partial_export.info.yml
+@@ -1,7 +1,7 @@
+ name: Configuration Partial Export
+ type: module
+ description: Partial export of selected configuration files.
+-core_version_requirement: ^9 || ^10
++core_version_requirement: ^9 || ^10 || ^11
+ package: Development
+ dependencies:
+   - drupal:config

@@ -1,0 +1,27 @@
+diff --git a/core/lib/Drupal/Core/Asset/AssetResolver.php b/core/lib/Drupal/Core/Asset/AssetResolver.php
+--- a/core/lib/Drupal/Core/Asset/AssetResolver.php	
++++ b/core/lib/Drupal/Core/Asset/AssetResolver.php	(date 1734481978992)
+@@ -155,7 +155,10 @@
+    */
+   protected function filterLibrariesByType(array $libraries, string $asset_type): array {
+     foreach ($libraries as $key => $library) {
+-      [$extension, $name] = explode('/', $library, 2);
++      [$extension, $name] = array_pad(explode('/', $library), 2, NULL);
++      if (!($extension && $name)) {
++        continue;
++      }
+       $definition = $this->libraryDiscovery->getLibraryByName($extension, $name);
+       if (empty($definition[$asset_type])) {
+         unset($libraries[$key]);
+@@ -252,7 +255,10 @@
+     $settings = [];
+ 
+     foreach ($this->getLibrariesToLoad($assets, 'js') as $library) {
+-      [$extension, $name] = explode('/', $library, 2);
++      [$extension, $name] = array_pad(explode('/', $library), 2, NULL);
++      if (!($extension && $name)) {
++        continue;
++      }
+       $definition = $this->libraryDiscovery->getLibraryByName($extension, $name);
+       if (isset($definition['drupalSettings'])) {
+         $settings = NestedArray::mergeDeepArray([$settings, $definition['drupalSettings']], TRUE);

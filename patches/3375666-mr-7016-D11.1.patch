@@ -1,0 +1,55 @@
+diff --git a/core/lib/Drupal/Core/Asset/AssetResolver.php b/core/lib/Drupal/Core/Asset/AssetResolver.php
+--- a/core/lib/Drupal/Core/Asset/AssetResolver.php	
++++ b/core/lib/Drupal/Core/Asset/AssetResolver.php	(date 1737374696825)
+@@ -172,6 +172,9 @@
+   protected function filterLibrariesByType(array $libraries, string $asset_type): array {
+     foreach ($libraries as $key => $library) {
+       [$extension, $name] = explode('/', $library, 2);
++      if (!($extension && $name)) {
++        continue;
++      }
+       $definition = $this->libraryDiscovery->getLibraryByName($extension, $name);
+       if (empty($definition[$asset_type])) {
+         unset($libraries[$key]);
+@@ -219,6 +222,9 @@
+ 
+     foreach ($libraries_to_load as $library) {
+       [$extension, $name] = explode('/', $library, 2);
++      if (!($extension && $name)) {
++        continue;
++      }
+       $definition = $this->libraryDiscovery->getLibraryByName($extension, $name);
+       foreach ($definition['css'] as $options) {
+         $options += $default_options;
+@@ -273,6 +279,9 @@
+ 
+     foreach ($this->getLibrariesToLoad($assets, 'js') as $library) {
+       [$extension, $name] = explode('/', $library, 2);
++      if (!($extension && $name)) {
++        continue;
++      }
+       $definition = $this->libraryDiscovery->getLibraryByName($extension, $name);
+       if (isset($definition['drupalSettings'])) {
+         $settings = NestedArray::mergeDeepArray([$settings, $definition['drupalSettings']], TRUE);
+@@ -301,6 +310,9 @@
+     $header_js_libraries = [];
+     foreach ($libraries_to_load as $key => $library) {
+       [$extension, $name] = explode('/', $library, 2);
++      if (!($extension && $name)) {
++        continue;
++      }
+       $definition = $this->libraryDiscovery->getLibraryByName($extension, $name);
+       if (!empty($definition['header'])) {
+         $header_js_libraries[] = $library;
+diff --git a/core/lib/Drupal/Core/Render/HtmlResponseAttachmentsProcessor.php b/core/lib/Drupal/Core/Render/HtmlResponseAttachmentsProcessor.php
+--- a/core/lib/Drupal/Core/Render/HtmlResponseAttachmentsProcessor.php	
++++ b/core/lib/Drupal/Core/Render/HtmlResponseAttachmentsProcessor.php	(date 1737374747006)
+@@ -119,7 +119,7 @@
+       // Turbolinks to be implemented without altering core.
+       // @see https://github.com/rails/turbolinks/
+       $ajax_page_state = $this->requestStack->getCurrentRequest()->get('ajax_page_state');
+-      $assets->setAlreadyLoadedLibraries(isset($ajax_page_state) ? explode(',', $ajax_page_state['libraries']) : []);
++      $assets->setAlreadyLoadedLibraries(isset($ajax_page_state) ? array_filter(explode(',', $ajax_page_state['libraries'])) : []);
+       $variables = $this->processAssetLibraries($assets, $attachment_placeholders);
+       // $variables now contains the markup to load the asset libraries. Update
+       // $attached with the final list of libraries and JavaScript settings, so

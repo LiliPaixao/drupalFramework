@@ -67,10 +67,13 @@ jquery.validate:
     - core/jquery
 
 slick:
-  version: 1.8.0
+  version: 1.8.1
   js:
-    libraries/slick/slick/slick.min.js: { type: external, scope: footer }
+    web/libraries/slick/slick/slick.min.js: { type: external, scope: footer }
   css:
     theme:
-      libraries/slick/slick/slick.css: {}
-      libraries/slick/slick/slick-theme.css: {}
+      web/libraries/slick/slick/slick.css: {}
+      web/libraries/slick/slick/slick-theme.css: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings

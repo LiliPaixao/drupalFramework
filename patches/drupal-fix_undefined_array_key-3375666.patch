@@ -1,0 +1,92 @@
+From c7ffbfaab9dffa82b6f116d8c8bd1f8d30fc01b8 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Jo=C3=ABl=20Pittet?= <pittet@cs.ubc.ca>
+Date: Wed, 5 Feb 2025 00:41:55 -0800
+Subject: [PATCH] Exception for when library is invalid and missing a /
+
+---
+ core/lib/Drupal/Core/Asset/AssetResolver.php     | 16 ++++++++++++++++
+ .../Asset/Exception/InvalidLibraryException.php  | 10 ++++++++++
+ 2 files changed, 26 insertions(+)
+ create mode 100644 core/lib/Drupal/Core/Asset/Exception/InvalidLibraryException.php
+
+diff --git a/core/lib/Drupal/Core/Asset/AssetResolver.php b/core/lib/Drupal/Core/Asset/AssetResolver.php
+index e853f63b78..f311f56b49 100644
+--- a/core/lib/Drupal/Core/Asset/AssetResolver.php
++++ b/core/lib/Drupal/Core/Asset/AssetResolver.php
+@@ -5,6 +5,7 @@
+ use Drupal\Component\Utility\Crypt;
+ use Drupal\Component\Utility\NestedArray;
+ use Drupal\Component\Utility\UrlHelper;
++use Drupal\Core\Asset\Exception\InvalidLibraryException;
+ use Drupal\Core\Cache\CacheBackendInterface;
+ use Drupal\Core\Extension\ModuleHandlerInterface;
+ use Drupal\Core\Extension\ThemeHandlerInterface;
+@@ -171,6 +172,9 @@ protected function getLibrariesToLoad(AttachedAssetsInterface $assets, ?string $
+    */
+   protected function filterLibrariesByType(array $libraries, string $asset_type): array {
+     foreach ($libraries as $key => $library) {
++      if (!str_contains($library, '/')) {
++        throw new InvalidLibraryException(sprintf("Invalid library name '%s': missing a '/'", $library));
++      }
+       [$extension, $name] = explode('/', $library, 2);
+       $definition = $this->libraryDiscovery->getLibraryByName($extension, $name);
+       if (empty($definition[$asset_type])) {
+@@ -218,6 +222,9 @@ public function getCssAssets(AttachedAssetsInterface $assets, $optimize, ?Langua
+     ];
+ 
+     foreach ($libraries_to_load as $library) {
++      if (!str_contains($library, '/')) {
++        throw new InvalidLibraryException(sprintf("Invalid library name '%s': missing a '/'", $library));
++      }
+       [$extension, $name] = explode('/', $library, 2);
+       $definition = $this->libraryDiscovery->getLibraryByName($extension, $name);
+       foreach ($definition['css'] as $options) {
+@@ -272,6 +279,9 @@ protected function getJsSettingsAssets(AttachedAssetsInterface $assets) {
+     $settings = [];
+ 
+     foreach ($this->getLibrariesToLoad($assets, 'js') as $library) {
++      if (!str_contains($library, '/')) {
++        throw new InvalidLibraryException(sprintf("Invalid library name '%s': missing a '/'", $library));
++      }
+       [$extension, $name] = explode('/', $library, 2);
+       $definition = $this->libraryDiscovery->getLibraryByName($extension, $name);
+       if (isset($definition['drupalSettings'])) {
+@@ -300,6 +310,9 @@ public function getJsAssets(AttachedAssetsInterface $assets, $optimize, ?Languag
+     // Collect all libraries that contain JS assets and are in the header.
+     $header_js_libraries = [];
+     foreach ($libraries_to_load as $key => $library) {
++      if (!str_contains($library, '/')) {
++        throw new InvalidLibraryException(sprintf("Invalid library name '%s': missing a '/'", $library));
++      }
+       [$extension, $name] = explode('/', $library, 2);
+       $definition = $this->libraryDiscovery->getLibraryByName($extension, $name);
+       if (!empty($definition['header'])) {
+@@ -339,6 +352,9 @@ public function getJsAssets(AttachedAssetsInterface $assets, $optimize, ?Languag
+       $header_js_libraries = $this->libraryDependencyResolver->getLibrariesWithDependencies($header_js_libraries);
+ 
+       foreach ($libraries_to_load as $library) {
++        if (!str_contains($library, '/')) {
++          throw new InvalidLibraryException(sprintf("Invalid library name '%s': missing a '/'", $library));
++        }
+         [$extension, $name] = explode('/', $library, 2);
+         $definition = $this->libraryDiscovery->getLibraryByName($extension, $name);
+         foreach ($definition['js'] as $options) {
+diff --git a/core/lib/Drupal/Core/Asset/Exception/InvalidLibraryException.php b/core/lib/Drupal/Core/Asset/Exception/InvalidLibraryException.php
+new file mode 100644
+index 0000000000..7a4c241116
+--- /dev/null
++++ b/core/lib/Drupal/Core/Asset/Exception/InvalidLibraryException.php
+@@ -0,0 +1,10 @@
++<?php
++
++namespace Drupal\Core\Asset\Exception;
++
++/**
++ * Defines a custom exception if a library name is invalid.
++ */
++class InvalidLibraryException extends \RuntimeException {
++
++}
+-- 
+2.43.0
+

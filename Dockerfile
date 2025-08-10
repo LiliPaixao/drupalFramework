@@ -1,4 +1,45 @@
-FROM php:8.2-apache
+FROM php:8.3-apache
+
+# Corrija vulnerabilidades instalando apenas as dependências necessárias e removendo caches
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        ca-certificates \
+        libjpeg-dev \
+        libpng-dev \
+        libwebp-dev \
+        libzip-dev \
+        libxml2-dev \
+        libxslt1-dev \
+        libicu-dev \
+        libpq-dev \
+        libldap2-dev \
+        libssl-dev \
+        libonig-dev \
+        zlib1g-dev \
+        bash-completion \
+        default-mysql-client \
+        git \
+        wget \
+        unzip \
+        nano \
+        vim \
+        sudo \
+        htop \
+        iputils-ping \
+        dnsutils \
+        imagemagick \
+        graphviz \
+        memcached \
+        libmemcached-tools \
+        libmemcached-dev \
+        linux-libc-dev \
+        libyaml-dev \
+        ruby-dev \
+        rubygems \
+    && rm -rf /var/lib/apt/lists/*
+
+# Ensure all packages are up-to-date to reduce vulnerabilities
+RUN apt-get update && apt-get upgrade -y
 
 # Instala extensões necessárias para o Drupal
 RUN apt-get update && apt-get install -y \

@@ -1,0 +1,26 @@
+diff --git a/bootstrap_styles.libraries.yml b/bootstrap_styles.libraries.yml
+index bbe0cc3..d74ae9e 100644
+--- a/bootstrap_styles.libraries.yml
++++ b/bootstrap_styles.libraries.yml
+@@ -169,7 +169,7 @@ plugin.box_shadow.build:
+ # scroll_effects
+ plugin.scroll_effects.build:
+   dependencies:
+-    - aos.remote
++    - bootstrap_styles/aos.remote
+ 
+ # AOS remote library.
+ aos.remote:
+diff --git a/bootstrap_styles.module b/bootstrap_styles.module
+index ccb14e2..b660c9e 100644
+--- a/bootstrap_styles.module
++++ b/bootstrap_styles.module
+@@ -108,7 +108,7 @@ function bootstrap_styles_library_info_alter(&$libraries, $extension) {
+       && ($dependency_key = array_search('aos.remote', $libraries['plugin.scroll_effects.build']['dependencies'])) !== FALSE) {
+ 
+       unset($libraries['plugin.scroll_effects.build']['dependencies'][$dependency_key]);
+-      $libraries['plugin.scroll_effects.build']['dependencies'][] = 'aos.local';
++      $libraries['plugin.scroll_effects.build']['dependencies'][] = 'bootstrap_styles/aos.local';
+ 
+     }
+   }
