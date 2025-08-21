@@ -73,6 +73,9 @@
             }
         },
         "patches": {
+            "slick": {
+                "Atualiza slick.js e slick.min.js para compatibilidade": "patches/slick-f9a8733207-with-jsmin.patch"
+            },
             "drupal/config_partial_export": {
                 "Rector patch para 2.0.0-alpha1": "patches/config_partial_export.2.0.0-alpha1.rector.patch"
             },

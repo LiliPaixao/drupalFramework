@@ -1,0 +1,10 @@
+{
+  "name": "meu-projeto-drupal",
+  "description": "Dependências JavaScript para projeto Drupal",
+  "dependencies": {
+    "slick-carousel": "1.6.0",
+    "jquery.easing": "^1.3.1"
+  },
+  "license": "MIT",
+  "private": true
+}

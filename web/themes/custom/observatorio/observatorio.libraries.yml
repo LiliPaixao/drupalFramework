@@ -10,6 +10,7 @@ style:
   js:
     build/js/main.script.js: {}
   dependencies:
+    - core/jquery
     - radix/radix
     - core/drupal
 
@@ -66,14 +67,3 @@ jquery.validate:
   dependencies:
     - core/jquery
 
-slick:
-  version: 1.8.1
-  js:
-    web/libraries/slick/slick/slick.min.js: { type: external, scope: footer }
-  css:
-    theme:
-      web/libraries/slick/slick/slick.css: {}
-      web/libraries/slick/slick/slick-theme.css: {}
-  dependencies:
-    - core/jquery
-    - core/drupalSettings

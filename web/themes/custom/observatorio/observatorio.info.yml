@@ -2,7 +2,7 @@ name: observatorio
 description: "observatorio theme based on <a href='https://www.drupal.org/project/radix' target='_blank'>Radix 6.x</a> and Bootstrap 5.x"
 screenshot: screenshot.png
 'alt text': 'observatorio theme screenshot'
-core_version_requirement: ^10
+core_version_requirement: ^10 || ^11
 engine: twig
 type: theme
 'base theme': radix
@@ -23,7 +23,6 @@ libraries:
   - observatorio/global
   - observatorio/global-styling
   - observatorio/style
-  - slick/slick
 ckeditor5-stylesheets:
   - build/css/main.style.css
 libraries-extend:

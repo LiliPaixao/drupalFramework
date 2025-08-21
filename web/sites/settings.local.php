@@ -149,3 +149,4 @@ $settings['skip_permissions_hardening'] = TRUE;
  * the language or field module.
  */
 # $settings['config_exclude_modules'] = ['devel', 'stage_file_proxy'];
+$settings['file_public_path'] = 'sites/default/files';

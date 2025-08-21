@@ -95,3 +95,5 @@ mix.copyDirectoryWatched('src/assets/images', 'build/assets/images');
 mix.copyDirectoryWatched('src/assets/icons', 'build/assets/icons');
 mix.copyDirectoryWatched('src/assets/videos', 'build/assets/videos');
 mix.copyDirectoryWatched('src/assets/fonts/**/*', 'build/fonts');
+
+
