@@ -45,7 +45,7 @@
         "drupal/slick_views": "^3.0",
         "drupal/twig_tweak": "^3.4",
         "drupal/upgrade_status": "^4.3",
-        "drupal/views_bootstrap": "^5.5@RC",
+        "drupal/views_bootstrap": "^5.0",
         "drush/drush": "^13"
     },
     "conflict": {
